@@ -1,87 +1,62 @@
-
-
-
-#submitBtn[disabled] {
-    background-color: gray;
-    cursor: not-allowed;
-}
-
+/* basic styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:#1e2633 ;
-    color: #f1f1f1;
+    background-color: #f4f4f4;
 }
-header {
-    background-color: #f1f1f1;
+
+/* login container */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
     padding: 20px;
-    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
 }
-header h1 {
-    margin: 0;
+
+/* form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
 }
-nav {
-    display: inline-block;
+
+label {
+    width: 100%;
+    margin-bottom: 10px;
 }
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
-nav li {
-    display: inline-block;
-    margin-right: 10px;
-}
-nav a {
-    text-decoration: none;
-    color: black;
-}
-section {
-    margin: 20px;
-}
-section h2 {
-    margin-top: 0;
-}
-.product {
-    display: inline-block;
-    margin-right: 20px;
-    text-align: center;
-}
-.product img {
-    width: 200px;
-}
-button {
+
+input[type="submit"] {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
 }
-footer {
-    padding: 20px;
-    text-align: center;
+
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    padding: 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-  }
-  #weather-info {
-    text-align: center;
-    padding: 20px;
-  }
-  footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-  }
-  
+
+/* media queries to make page responsive */
+@media screen and (max-width: 600px) {
+    label {
+        flex-basis: 100%;
+    }
+    input[type="text"],
+    input[type="password"] {
+        flex-basis: 100%;
+    }
+}
