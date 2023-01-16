@@ -1,0 +1,87 @@
+
+
+
+#submitBtn[disabled] {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#1e2633 ;
+    color: #f1f1f1;
+}
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    display: inline-block;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+section {
+    margin: 20px;
+}
+section h2 {
+    margin-top: 0;
+}
+.product {
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+}
+.product img {
+    width: 200px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+  }
+  #weather-info {
+    text-align: center;
+    padding: 20px;
+  }
+  footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
