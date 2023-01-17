@@ -59,13 +59,24 @@ function initMap() {
 
   google.maps.event.addListener(map, 'bounds_changed', function() {
     var bounds = map.getBounds();
+    
+    // Get the coordinates of the bottom-left and top-right corners of the visible area of the map
+    var sw = bounds.getSouthWest();
+    var ne = bounds.getNorthEast();
+    
+    // Generate random latitude and longitude values within the bounds of the map
+    var latit = Math.random() * (ne.lat() - sw.lat()) + sw.lat();
+    var lngit = Math.random() * (ne.lng() - sw.lng()) + sw.lng();
+    
+    // Create a new LatLng object with the random coordinates
+    var randomPoint = new google.maps.LatLng(latit, lngit);
 
     if (!bounds.contains(marker1.getPosition())) {
         marker1.setPosition(bounds.getCenter());
     }
 
     if (!bounds.contains(marker2.getPosition())) {
-        marker2.setPosition(bounds.getNorthEast())
+        marker2.setPosition(randomPoint)
     }
 });
 
