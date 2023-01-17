@@ -72,7 +72,7 @@ function initMap() {
     var randomPoint = new google.maps.LatLng(latit, lngit);
 
     if (!bounds.contains(marker1.getPosition())) {
-        marker1.setPosition(bounds.getCenter());
+        marker1.setPosition(randomPoint);
     }
 
     if (!bounds.contains(marker2.getPosition())) {
