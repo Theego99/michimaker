@@ -20,12 +20,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const ope = document.querySelectorAll('.operator');
     ope.forEach(elem => {
         elem.addEventListener('click', event => {
+            if(operator == null){
             //一つ目の数値を保存
             firstNumber = display.value;
             console.log(firstNumber);
             //演算子を保存
             operator = event.target.value;
             display.value += ' ' + event.target.value + ' ';
+            }else{
+                alert("演算子を同時に複数利用することはできません！");
+            }
         });
     });
 
