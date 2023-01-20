@@ -29,13 +29,13 @@ if (isset($_SESSION["user_id"])) {
     
     <h1>Home</h1>
 
-    <a href="../index.html">
+    <a href="../add-route.html">
         <h2>道を登録</h2>
     </a>
     
     <?php if (isset($user)): ?>
         
-        <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
+        <p>こんにちは、 <?= htmlspecialchars($user["name"]) ?></p>
         
         <p><a href="logout.php">ログアウト</a></p>
         

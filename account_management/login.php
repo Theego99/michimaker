@@ -42,21 +42,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     
-    <h1>Login</h1>
+    <h1>ログイン</h1>
     
     <?php if ($is_invalid): ?>
-        <em>Invalid login</em>
+        <em>メールアドレスまたはパスワードが間違っています</em>
     <?php endif; ?>
     
     <form method="post">
-        <label for="email">email</label>
+        <label for="email">メールアドレス</label>
         <input type="email" name="email" id="email"
                value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
         
-        <label for="password">Password</label>
+        <label for="password">パスワード</label>
         <input type="password" name="password" id="password">
         
-        <button>Log in</button>
+        <button>送信</button>
     </form>
 <a href="./signup.html">
     <p>アカウントを持っていない </p>
