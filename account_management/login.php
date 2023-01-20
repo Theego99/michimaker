@@ -58,6 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         <button>Log in</button>
     </form>
-    
+<a href="./signup.html">
+    <p>アカウントを持っていない </p>
+</a>
 </body>
 </html>
