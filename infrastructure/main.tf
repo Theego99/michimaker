@@ -19,13 +19,19 @@ resource "random_password" "password" {
   upper            = true
 }
 
+resource "random_string" "login_name" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+
 
 # Manages the MySQL Flexible Server
 resource "azurerm_mysql_flexible_server" "default" {
   location                     = azurerm_resource_group.michimaker.location
   name                         = var.server_name
   resource_group_name          = azurerm_resource_group.michimaker.name
-  administrator_login          = var.login_name
+  administrator_login          = random_string.login_name.result
   administrator_password       = random_password.password.result
   backup_retention_days        = 7
   geo_redundant_backup_enabled = false

@@ -20,8 +20,3 @@ variable "server_name" {
     error_message = "Server name is too short. Minimum length is 9 characters. Current length is ${length(var.server_name)} characters."
   }
 }
-
-variable "login_name" {
-  type    = string
-  default = "michimaker_admin"
-}
