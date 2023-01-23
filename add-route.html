@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- ディエゴのhtml -->
 <!-- 書き換えないように！ -->
 
@@ -49,4 +50,57 @@
     <a href="#">test</a>
 </body>
 
+=======
+<!-- ディエゴのhtml -->
+<!-- 書き換えないように！ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nukemichi maker hp</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sanitize.css">
+    <script src="./validate_coordenates.js"></script>
+    <script src="./map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+</head>
+
+<body>
+    <a href="./index.html">
+        <h1>home</h1>
+    </a>
+    <div id="map" style="height: 500px; width: 500px;"></div>
+    <div id="coordinates1"></div>
+    <div id="coordinates2"></div>
+    <form action="./insert.php" method="post">
+        <fieldset class="personal-info">
+            <label>
+                <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
+                     placeholder="抜け道の起点">
+                <small id="msg"></small>
+                <small id="point_a-decimal"></small>
+            </label>
+            <label>
+                <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
+                     placeholder="抜け道の終点">
+                <small id="msg2"></small>
+                <small id="point_b-decimal"></small>
+            </label>
+            <label>
+                <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
+                    placeholder="抜け道の名前">
+            </label>
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </fieldset>
+    </form>
+    <a href="./calculator/index.html">js 課題　電卓　完成</a>
+    <a href="#">test</a>
+</body>
+
+>>>>>>> 3c6392df61ea68abd6c16f61ebef3f749fe9cb17
 </html>
