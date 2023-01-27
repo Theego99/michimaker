@@ -1,5 +1,18 @@
 body {
-    width: 1000px;
-    margin: auto;
-    overscroll-behavior: auto;
+  width: 1000px;
+  margin: auto;
+  overscroll-behavior: auto;
+}
+
+header {
+  width: 800px;
+}
+
+.nukemiti1 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5989cf;
+  background: #b319ca;
+  border-bottom: solid 6px #aac5de;
+  border-radius: 9px;
 }
