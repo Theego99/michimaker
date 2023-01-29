@@ -6,6 +6,7 @@ body {
 
 header {
   width: 800px;
+  color:#fcf4b3
 }
 
 .nukemiti1 {
@@ -15,4 +16,9 @@ header {
   background: #b319ca;
   border-bottom: solid 6px #aac5de;
   border-radius: 9px;
+}
+
+
+h1 {
+ color:#156797
 }
