@@ -5,14 +5,48 @@ body {
 }
 
 header {
-  width: 800px;
+  width: 850px;
+  background-color: #fcf4b3;
+  margin: auto;
 }
 
-.nukemiti1{
-  padding: 0.5em 1em;
-  margin: 2em 0;
+
+
+.search-box {
+  width: 700px;
+  margin: auto;
+}
+
+input {
+  width: 250px;
+}
+
+.nukemiti1 ,.nukemiti2 {
+  width: 820px;
+  margin: auto;
   color: #5989cf;
-  background: #b319ca;
-  border-bottom: solid 6px #aac5de;
+  background: #ffffff;
+  background-color: antiquewhite;
+  border: solid 6px #aac5de;
   border-radius: 9px;
 }
+
+
+
+
+h1 {
+  color: #0000fe;
+  padding-left: 10%;
+}
+
+.p1 {
+  color: #091350;
+  padding-left: 10%;
+}
+
+.p2 {
+  color: #2c4588;
+  padding-left: 10%;
+}
+
+
