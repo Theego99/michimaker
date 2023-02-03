@@ -9,7 +9,7 @@ header {
   background-color: #fcf4b3;
   margin: auto;
 }
-
+header img {width: 100px;}
 
 
 .search-box {
@@ -23,10 +23,10 @@ input {
 
 .nukemiti1 ,.nukemiti2 {
   width: 820px;
-  margin: auto;
+  margin: 20px auto;
   color: #5989cf;
   background: #ffffff;
-  background-color: antiquewhite;
+  background-color: #aac5de;
   border: solid 6px #aac5de;
   border-radius: 9px;
 }
