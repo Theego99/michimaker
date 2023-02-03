@@ -4,8 +4,9 @@ body {
 }
 
 header {
-  width: 950px;
+  width: 100%;
   height: 150px;
+  text-align: center;
   background-color: #fcf4b3;
   margin: auto;
   display: flex;
@@ -36,7 +37,7 @@ li {
 
 .ad-block1-wrapper {
   text-align: center;
-  width:300px;
+  width:30%;
 }
 
 .ad-block1 {
@@ -44,6 +45,7 @@ li {
   height:250px;
   margin:20px; 
   border: solid 4px;
+  background-color: #d9d9d9;
 }
 
 
