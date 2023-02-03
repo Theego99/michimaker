@@ -2,14 +2,42 @@ body {
   width: 1000px;
   margin: auto;
   overscroll-behavior: auto;
+  text-decoration: none;
+  list-style: none;
 }
 
 header {
-  width: 850px;
+  width: 950px;
   background-color: #fcf4b3;
   margin: auto;
+  display: flex;
 }
-header img {width: 100px;}
+
+
+header img {
+  text-align: left;
+  width: 300px;
+  height: 100px;
+  ;
+}
+
+.ul-wrap {
+  margin-right: 20px;
+  padding: left 300px;
+}
+
+ul {
+  display: flex;
+  text-align: center;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li {
+  padding: 20px 20px 20px 20px;
+}
+
+
 
 
 .search-box {
@@ -21,7 +49,8 @@ input {
   width: 250px;
 }
 
-.nukemiti1 ,.nukemiti2 {
+.nukemiti1,
+.nukemiti2 {
   width: 820px;
   margin: 20px auto;
   color: #5989cf;
@@ -48,5 +77,3 @@ h1 {
   color: #2c4588;
   padding-left: 10%;
 }
-
-
