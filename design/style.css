@@ -37,19 +37,24 @@ li {
 
 .ad-block1-wrapper {
   text-align: center;
-  width:30%;
+  width: 30%;
+  margin-top: 80px;
 }
 
 .ad-block1 {
   width: 250px;
-  height:250px;
-  margin:20px; 
+  height: 250px;
+  margin: 20px;
   border: solid 4px;
   background-color: #d9d9d9;
 }
 
 
-.article-wrap{display: flex;}
+.article-wrap {
+  display: flex;
+}
+
+article{margin-top: 40px;;}
 
 
 .search-box {
@@ -60,14 +65,14 @@ li {
 }
 
 input {
-  width: 300px;
+  width: 320px;
   height: 40px;
 }
 
 .nukemiti1,
 .nukemiti2 {
   width: 580px;
-  margin: 40px auto;
+  margin: 20px auto;
   background-color: #dae7ed;
   border: solid 6px #aac5de;
   border-radius: 39px;
