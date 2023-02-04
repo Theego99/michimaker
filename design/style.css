@@ -12,7 +12,6 @@ header {
   display: flex;
 }
 
-
 .header img {
   text-align: left;
   padding-left: 80px;
@@ -20,7 +19,6 @@ header {
   height: 100px;
   ;
 }
-
 
 ul {
   display: flex;
@@ -30,10 +28,8 @@ ul {
 }
 
 li {
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 21px;
 }
-
-
 
 .ad-block1-wrapper {
   text-align: center;
@@ -49,13 +45,13 @@ li {
   background-color: #d9d9d9;
 }
 
-
 .article-wrap {
   display: flex;
 }
 
-article{margin-top: 40px;;}
-
+article {
+  margin-top: 40px;
+}
 
 .search-box {
   text-align: center;
@@ -77,9 +73,6 @@ input {
   border: solid 6px #aac5de;
   border-radius: 39px;
 }
-
-
-
 
 h1 {
   color: #0000fe;
@@ -128,8 +121,8 @@ h1 {
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
   display: flex;
-  height: 80px;
-  width: 180px;
+  height: 100px;
+  width: 80px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -182,6 +175,7 @@ h1 {
 .nav_content {
   width: 50%;
   height: 100%;
+  /* のちのち大きさは微調査委する予定 */
   position: fixed;
   top: 0;
   left: 100%;
@@ -189,12 +183,114 @@ h1 {
   z-index: 99;
   background: #fff;
   transition: 0.25s;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #469db9;
 }
+
+
+.nav_content {
+  text-align: center;
+}
+
 
 /* メニュー黒ポチを消す */
 .nav_list {
   list-style: none;
+  flex-flow: column;
+  margin: auto;
 }
+
+
+
+.nav_list a {
+  text-decoration: none;
+  color: #e7f3f6;
+  font-size: 28px;
+}
+
+.nav_list img {
+  width: 40px;
+  padding-left: 10px;
+  ;
+  /* text-decoration: underline; */
+}
+
+
+/* 虫眼鏡アイコン設定 */
+.nav_list,
+.musimegame {
+  display: flex;
+  /* text-align: center; */
+  vertical-align: middle;
+  margin: 20px;
+}
+
+.musimegame {
+  border-bottom: solid 3px;
+}
+
+/* .nav_list .musimegame:nth-child(2){
+padding-left:0px;
+} */
+
+
+
+
+/* 上下矢印アイコン設定 */
+.zyouge-yazirusi {
+  display: flex;
+  border-bottom: solid 3px;
+}
+
+.zyouge-yazirusi img:nth-child(1) {
+  margin-right: 0px;
+  ;
+}
+
+.zyouge-yazirusi img:nth-child(2) {
+  margin-left: 0px;
+  padding-left: 0px;
+  ;
+}
+
+
+/* ヒトアイコン設定 */
+.hito {
+  display: flex;
+  border-bottom: solid 3px;
+}
+
+/* 地球儀アイコン設定 */
+.tikyuugi {
+  display: flex;
+  border-bottom: solid 3px;
+}
+
+
+
+
+
+
+
+
+
+.nav_content .nav_item {
+  width: 300px;
+  height: 70px;
+  /* margin-left: 30px; */
+  /* align-items:center; */
+}
+
+
+.nav_item {
+  width: 300px;
+  height: 70px;
+  /* margin-left:20px;
+  padding-left: 20px;; */
+}
+
+
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked~.nav_content {
