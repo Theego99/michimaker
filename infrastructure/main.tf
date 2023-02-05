@@ -64,11 +64,19 @@ resource "azurerm_mysql_flexible_database" "michimaker" {
   server_name         = azurerm_mysql_flexible_server.default.name
   charset             = "utf8"
   collation           = "utf8_unicode_ci"
-  provisioner "local-exec"{
+  provisioner "local-exec" {
     command = "mysql --host=${azurerm_mysql_flexible_server.default.fqdn} --database=${self.name} --user=${azurerm_mysql_flexible_server.default.administrator_login} --password=${azurerm_mysql_flexible_server.default.administrator_password} --ssl-ca=DigiCertGlobalRootCA.crt.pem < ../datamodel/schema.sql"
   }
 }
 
-data "http" "myip" { 
-    url = "http://ifconfig.me/ip"
-    }
+resource "azurerm_service_plan" "service_plan" {
+  name                = "michimaker_app"
+  resource_group_name = azurerm_resource_group.michimaker.name
+  location            = azurerm_resource_group.michimaker.location
+  os_type             = "linux"
+  sku_name            = ""
+}
+
+data "http" "myip" {
+  url = "http://ifconfig.me/ip"
+}
