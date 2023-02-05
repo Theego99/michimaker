@@ -13,32 +13,86 @@
 
 <body>
   <a href="https://michimaker.com"></a>
-  <header>
-    <img src="./images/NUKEMICHI_icon.png">
+
+  <header class="header">
+    <img src="./images/NUKEMICHI.png">
+    <!-- ヘッダーロゴ -->
+    <div class="logo"></div>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+      <!-- ハンバーガーアイコン -->
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+      <!-- メニュー -->
+      <nav class="nav_content">
+        <ul class="nav_list">
+          <!-- 三本線のやつ -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>
+          <div class="musimegame">
+            <img src="./images/虫眼鏡アイコン.svg">
+            <li class="nav_item"><a href="">SEARCH</a></li>
+          </div>
+          <div class="zyouge-yazirusi">
+            <img src="./images/上矢印.svg">
+            <img src="./images/下矢印.svg">
+            <li class="nav_item"><a href="">NEW SHORTCUT</a></li>
+          </div>
+
+          <div class="hito">
+            <img src="./images/ヒト.svg">
+            <li class="nav_item"><a href="">MY PAGE</a></li>
+          </div>
+
+          <div class ="tikyuugi">  
+            <img src="./images/地球儀.svg">
+          <li class="nav_item"><a href="">LANGUAGE</a></li>
+        </div>
+        </ul>
+      </nav>
+    </div>
+
   </header>
 
+  <!-- <img src="./images/虫眼鏡アイコン.png"> -->
 
-  <article>
-    <div class="search-box">
-      <i class="fas fa-search"></i>
-      <form action="michimaker.com" method="get">
-        <input type="search" name="search" placeholder="キーワードを入力">
-        <input type="submit" name="submit" value="検索">
-      </form>
+  <div class="article-wrap">
+
+    <div>
+      <article>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <form action="michimaker.com" method="get">
+            <input type="search" name="search" placeholder="キーワードを入力">
+            <input type="submit" name="submit" value="検索">
+          </form>
+        </div>
+
+        <div>
+          <div class="nukemiti1">
+            <h1>抜け道１</h1>
+            <p class="p1">東京都・新宿区</p>
+            <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
+
+          </div>
+          <div class="nukemiti2">
+            <h1>抜け道２</h1>
+            <p class="p1">東京都・渋谷区</p>
+            <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="ad-block1-wrapper">
+      <p class="ad-block1">広告１</p>
+      <p class="ad-block1">広告２</p>
     </div>
 
-    <div class="nukemiti1">
-      <h1>抜け道１</h1>
-      <p class="p1">東京都・新宿区</p>
-      <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
 
-    </div>
-    <div class="nukemiti2">
-      <h1>抜け道２</h1>
-      <p class="p1">東京都・渋谷区</p>
-      <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
-    </div>
-  </article>
+  </div>
+
+
 
   <footer></footer>
 
