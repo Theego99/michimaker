@@ -1,15 +1,22 @@
-body {
+html {
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
   margin: auto;
 }
 
 header {
-  width: 100%;
+  width: 100% !important;
   height: 150px;
   text-align: center;
   background-color: #fcf4b3;
   margin: auto;
   display: flex;
+  /* z-index: 1000; */
 }
 
 .header img {
@@ -48,6 +55,7 @@ li {
 .article-wrap {
   margin: auto;
   display: flex;
+  width: fit-content;
 }
 
 article {
@@ -61,19 +69,47 @@ article {
   margin: auto;
 }
 
-input {
-  width: 320px;
-  height: 40px;
+
+.search-txtbox {
+  background-color: #d9d9d9;
+  border: none;
+  box-shadow: 0 2px 7px 0 #3333339c;
 }
 
-.nukemiti1,
-.nukemiti2 {
-  width: 580px;
-  margin: 20px auto;
-  background-color: #dae7ed;
-  border: solid 6px #aac5de;
-  border-radius: 39px;
+/* .submit-button{
+  display: none;
+} */
+
+.submit-button {
+  border: none;
+  background: none;
+  margin-left: -30px;
+
+
 }
+
+input {
+  width: 80%;
+  height: 60px;
+}
+
+.nukemiti {
+  width: 580px;
+  margin: 40px auto;
+  background-color: #dae7ed;
+  /* border: solid 6px #aac5de; */
+  border: none;
+  border-radius: 39px;
+  box-shadow: 0 2px 7px 0 #1e232581;
+  padding: 8px;
+}
+
+.nukemiti:hover {
+  box-shadow: none;
+  box-shadow: inset 2px 0 7px 0 #1e232581;
+  border: none;
+}
+
 
 h1 {
   color: #0000fe;
@@ -173,10 +209,11 @@ h1 {
 }
 
 
-.nav{
+.nav {
   position: fixed;
   left: 90%;
 }
+
 /* メニューのデザイン*/
 .nav_content {
   width: 50%;
