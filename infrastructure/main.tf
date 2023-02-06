@@ -7,12 +7,12 @@ resource "azurerm_resource_group" "michimaker" {
 
 # Generate random value for the login password
 resource "random_password" "password" {
-  length           = 20
+  length           = 24
   lower            = true
-  min_lower        = 1
-  min_numeric      = 1
-  min_special      = 1
-  min_upper        = 1
+  min_lower        = 3
+  min_numeric      = 3
+  min_special      = 3
+  min_upper        = 3
   numeric          = true
   override_special = "_"
   special          = true
@@ -20,18 +20,19 @@ resource "random_password" "password" {
 }
 
 resource "random_string" "login_name" {
-  length           = 16
-  special          = true
-  override_special = "/@£$"
+  length  = 16
+  special = false
+  upper   = false
+  numeric = false
 }
 
 
 # Manages the MySQL Flexible Server
 resource "azurerm_mysql_flexible_server" "default" {
   location                     = azurerm_resource_group.michimaker.location
-  name                         = var.server_name
+  name                         = "testdiegoalonsowa5fg4"
   resource_group_name          = azurerm_resource_group.michimaker.name
-  administrator_login          = random_string.login_name.result
+  administrator_login          = "michimaker_admin"
   administrator_password       = random_password.password.result
   backup_retention_days        = 7
   geo_redundant_backup_enabled = false
@@ -69,12 +70,40 @@ resource "azurerm_mysql_flexible_database" "michimaker" {
   }
 }
 
-resource "azurerm_service_plan" "service_plan" {
-  name                = "michimaker_app"
+
+
+resource "azurerm_service_plan" "serviceplan" {
+  name                = "michimakerserviceplan"
   resource_group_name = azurerm_resource_group.michimaker.name
   location            = azurerm_resource_group.michimaker.location
-  os_type             = "linux"
-  sku_name            = ""
+  os_type             = "Linux"
+  sku_name            = "B1"
+}
+
+resource "azurerm_linux_web_app" "appservice" {
+  name                = "michimakerappservice"
+  resource_group_name = azurerm_resource_group.michimaker.name
+  location            = azurerm_resource_group.michimaker.location
+  service_plan_id     = azurerm_service_plan.serviceplan.id
+  site_config {
+    ftps_state             = "FtpsOnly"
+    vnet_route_all_enabled = false
+    application_stack {
+      php_version = "8.1"
+    }
+  }
+}
+
+resource "azurerm_app_service_connection" "myconnection" {
+  name               = "myconnection"
+  app_service_id     = azurerm_linux_web_app.appservice.id
+  target_resource_id = azurerm_mysql_flexible_database.michimaker.id
+  authentication {
+    type   = "secret"
+    name   = azurerm_mysql_flexible_server.default.administrator_login
+    secret = azurerm_mysql_flexible_server.default.administrator_password
+  }
+  client_type = "php"
 }
 
 data "http" "myip" {
