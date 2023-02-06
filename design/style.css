@@ -294,6 +294,6 @@ padding-left:0px;
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked~.nav_content {
-  left: 0;
+  left: 50%;
   /* メニューを画面に入れる */
 }
