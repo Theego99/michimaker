@@ -141,7 +141,7 @@ h1 {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  background-color: #fcf4b3;
+  background-color: #fcf4b3
 }
 
 .logo {
@@ -160,6 +160,7 @@ h1 {
   display: flex;
   height: 100px;
   width: 80px;
+  right: 20px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -332,55 +333,118 @@ padding-left:0px;
 
 
 /* ----------------------------------------------------↓　ここからadd?route.htmlのcss------------- */
-.Dthego-wrap{vertical-align: middle;}
+@media screen and (max-width:480px) {
+  header {
+    width: 100%;
+    background-color: #fcf4b3
+  }
+
+  /*　画面サイズが480px以下の場合ここの記述が適用される　*/
+}
+
+
+.Dthego-wrap {
+  vertical-align: middle;
+}
 
 
 .Dthego {
-  border: solid 12px #5eabd7;
+  border: solid 6px #5eabd7;
+  text-align: center;
+  margin: 40px 5px 20px 10px;
+  width: 51%;
+  background-color: #deecef;
+}
+
+.googlemaps-wrap {
+  width: fit-content;
+  margin: auto;
+  /* padding-bottom: 20px; */
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  /* border: solid 2px black; */
+}
+
+.personal-info {
+  text-align: left;
+}
+
+
+
+.addroute-txtbox-wrap {
+  text-align: left;
+  width: 44%;
   margin: 10px;
 }
 
-
-.googlemaps-wrap {
-  display: flex;
-  vertical-align: middle;
-  border: solid 2px black;
-}
-
-.addroute-txtbox-wrap {
-  text-align: center;
+.addroute-txtbox-wrap form {
+  width: 100%;
 }
 
 
-
+/* 始点 */
 .addroute-txtbox1 {
   background-color: #f0a0a1;
   color: #e27c7c;
-  width: 300px;
+  width: 80%;
+  height: 110px;
   font-size: 30px;
-  margin: 40px;
+  margin: 40px 10px 40px 10px
+    /* padding:20px; */
 }
 
+/* 終点 */
 .addroute-txtbox2 {
-  background-color: #f0a0a1;
+  background-color: #7ec6de;
   color: #e27c7c;
-  width: 300px;
+  width: 80%;
+  height: 110px;
   font-size: 30px;
-  margin: 40px;
+  margin: 40px 10px 40px 10px
 }
 
+/* 名前 */
 .addroute-txtbox3 {
-  background-color: #f0a0a1;
-  color: #e27c7c;
-  width: 300px;
+  background-color: #dae7ed;
+  color: #adb8bc;
+  width: 80%;
+  height: 110px;
   font-size: 30px;
-  margin: 40px;
+  margin: 40px 10px 40px 10px;
 }
 
+/*注意書き */
 .addroute-txtbox4 {
   background-color: #f0a0a1;
   color: #e27c7c;
-  width: 300px;
+  width: 80%;
+  height: 290px;
   font-size: 30px;
-  margin: 40px;
+  margin: 40px 10px 20px 10px;
+  text-align: left;
+  padding-bottom: 200px;
+}
+
+
+
+.send-addroute-req {
+  position: absolute;
+  left: 49%;
+  text-align: center;
+  align-items: center;
+  font-size: 24px;
+  margin: auto;
+  width: fit-content;
+
+}
+
+.send-addroute-req p {
+  background-color: #166898;
+  text-align: center;
+  width: 150px;
+  border: solid 0.02px rgba(0, 0, 0, 0.201);
+  border-radius: 4px;
+  margin: 20px auto;
+  color: #e1ebf2;
 }
