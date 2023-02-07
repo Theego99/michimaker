@@ -332,11 +332,19 @@ padding-left:0px;
 
 
 /* ----------------------------------------------------↓　ここからadd?route.htmlのcss------------- */
+.Dthego-wrap{vertical-align: middle;}
+
+
+.Dthego {
+  border: solid 12px #5eabd7;
+  margin: 10px;
+}
 
 
 .googlemaps-wrap {
   display: flex;
   vertical-align: middle;
+  border: solid 2px black;
 }
 
 .addroute-txtbox-wrap {
@@ -344,9 +352,35 @@ padding-left:0px;
 }
 
 
-.addroute-txtbox {
+
+.addroute-txtbox1 {
   background-color: #f0a0a1;
   color: #e27c7c;
   width: 300px;
   font-size: 30px;
+  margin: 40px;
+}
+
+.addroute-txtbox2 {
+  background-color: #f0a0a1;
+  color: #e27c7c;
+  width: 300px;
+  font-size: 30px;
+  margin: 40px;
+}
+
+.addroute-txtbox3 {
+  background-color: #f0a0a1;
+  color: #e27c7c;
+  width: 300px;
+  font-size: 30px;
+  margin: 40px;
+}
+
+.addroute-txtbox4 {
+  background-color: #f0a0a1;
+  color: #e27c7c;
+  width: 300px;
+  font-size: 30px;
+  margin: 40px;
 }
