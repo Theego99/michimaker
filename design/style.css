@@ -251,9 +251,10 @@ h1 {
 .nav_list img {
   width: 40px;
   padding-left: 10px;
-  ;
-  /* text-decoration: underline; */
+  ; /* text-decoration: underline; */
 }
+
+
 
 /* 虫眼鏡アイコン設定 */
 .nav_list,
