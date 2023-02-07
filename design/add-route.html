@@ -4,49 +4,92 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nukemichi maker hp</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
-    <link rel="stylesheet" href="../design/style.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./validate_coordenates.js"></script>
-    <script src="./map.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nukemichi maker hp</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+  <link rel="stylesheet" href="../design/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./validate_coordenates.js"></script>
+  <script src="./map.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
 </head>
 
 <body>
-    <a href="./index.html">
-        <h1>home</h1>
-    </a>
-    <div id="map" style="height: 500px; width: 500px;"></div>
-    <div id="coordinates1"></div>
-    <div id="coordinates2"></div>
-    <form action="./insert.php" method="post">
-        <fieldset class="personal-info">
-            <label>
-                <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
-                     placeholder="抜け道の起点">
-                <small id="msg"></small>
-                <small id="point_a-decimal"></small>
-            </label>
-            <label>
-                <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
-                     placeholder="抜け道の終点">
-                <small id="msg2"></small>
-                <small id="point_b-decimal"></small>
-            </label>
-            <label>
-                <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
-                    placeholder="抜け道の名前">
-            </label>
-            <button type="submit" id="submitBtn" disabled>Submit</button>
-        </fieldset>
-    </form>
-    <a href="./calculator/index.html">js 課題　電卓　完成</a>
-    <a href="#">test</a>
+  <header class="header">
+    <img src="./images/NUKEMICHI.png">
+    <!-- ヘッダーロゴ -->
+    <div class="logo"></div>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+      <!-- ハンバーガーアイコン -->
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+      <!-- メニュー -->
+      <nav class="nav_content">
+        <ul class="nav_list">
+          <!-- 三本線のやつ -->
+          <div class="musimegame">
+            <img src="./images/虫眼鏡アイコン.svg">
+            <li class="nav_item"><a href="">SEARCH</a></li>
+          </div>
+          <div class="zyouge-yazirusi">
+            <img src="./images/上矢印.svg">
+            <img src="./images/下矢印.svg">
+            <li class="nav_item"><a href="">NEW SHORTCUT</a></li>
+          </div>
+
+          <div class="hito">
+            <img src="./images/ヒト.svg">
+            <li class="nav_item"><a href="">MY PAGE</a></li>
+          </div>
+
+          <div class="tikyuugi">
+            <img src="./images/地球儀.svg">
+            <li class="nav_item"><a href="">LANGUAGE</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+
+
+
+  <a href="./index.html">
+    <h1>home</h1>
+  </a>
+  <div id="map" style="height: 500px; width: 500px;"></div>
+  <div id="coordinates1"></div>
+  <div id="coordinates2"></div>
+  <form action="./insert.php" method="post">
+    <fieldset class="personal-info">
+      <label>
+        <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
+          placeholder="抜け道の起点">
+        <small id="msg"></small>
+        <small id="point_a-decimal"></small>
+      </label>
+      <label>
+        <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
+          placeholder="抜け道の終点">
+        <small id="msg2"></small>
+        <small id="point_b-decimal"></small>
+      </label>
+      <label>
+        <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
+          placeholder="抜け道の名前">
+      </label>
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </fieldset>
+  </form>
+  <a href="./calculator/index.html">js 課題　電卓　完成</a>
+  <a href="#">test</a>
 </body>
 
 <!-- ディエゴのhtml -->
@@ -56,48 +99,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nukemichi maker hp</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./sanitize.css">
-    <script src="./validate_coordenates.js"></script>
-    <script src="./map.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nukemichi maker hp</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./sanitize.css">
+  <script src="./validate_coordenates.js"></script>
+  <script src="./map.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
 </head>
 
 <body>
-    <a href="./index.html">
-        <h1>home</h1>
-    </a>
-    <div id="map" style="height: 500px; width: 500px;"></div>
-    <div id="coordinates1"></div>
-    <div id="coordinates2"></div>
-    <form action="./insert.php" method="post">
-        <fieldset class="personal-info">
-            <label>
-                <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
-                     placeholder="抜け道の起点">
-                <small id="msg"></small>
-                <small id="point_a-decimal"></small>
-            </label>
-            <label>
-                <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
-                     placeholder="抜け道の終点">
-                <small id="msg2"></small>
-                <small id="point_b-decimal"></small>
-            </label>
-            <label>
-                <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
-                    placeholder="抜け道の名前">
-            </label>
-            <button type="submit" id="submitBtn" disabled>Submit</button>
-        </fieldset>
-    </form>
-    <a href="./calculator/index.html">js 課題　電卓　完成</a>
-    <a href="#">test</a>
+  <a href="./index.html">
+    <h1>home</h1>
+  </a>
+  <div id="map" style="height: 500px; width: 500px;"></div>
+  <div id="coordinates1"></div>
+  <div id="coordinates2"></div>
+  <form action="./insert.php" method="post">
+    <fieldset class="personal-info">
+      <label>
+        <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
+          placeholder="抜け道の起点">
+        <small id="msg"></small>
+        <small id="point_a-decimal"></small>
+      </label>
+      <label>
+        <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
+          placeholder="抜け道の終点">
+        <small id="msg2"></small>
+        <small id="point_b-decimal"></small>
+      </label>
+      <label>
+        <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
+          placeholder="抜け道の名前">
+      </label>
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </fieldset>
+  </form>
+  <a href="./calculator/index.html">js 課題　電卓　完成</a>
+  <a href="#">test</a>
 </body>
 
 </html>
