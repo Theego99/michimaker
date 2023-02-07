@@ -465,22 +465,16 @@ padding-left:0px;
   color: #e1ebf2;
 }
 
-
+/*　画面サイズが480px以下の場合ここの記述が適用される　*/
 @media screen and (max-width:480px) {
   header {
     width: 100%;
     background-color: #fcf4b3
   }
 
-  .logoimage{margin-left:-20px;}
-
-  .drawer_open {
-    right: 30px
-  }
-
-  #drawer_input:checked~.nav_content {
-    left: 0%;
-    /* メニューを画面に入れる */
+  .logoimage {
+    margin-left: -20px;
+    width: 65% !important
   }
 
   .nav_content {
@@ -488,5 +482,33 @@ padding-left:0px;
     height: 100%;
   }
 
-  /*　画面サイズが480px以下の場合ここの記述が適用される　*/
+  .drawer_open {
+    right: 50px;
+    padding-left: 0px;
+  }
+
+  #drawer_input:checked~.nav_content {
+    left: 0%;
+    /* メニューを画面に入れる */
+  }
+
+  .home-button {
+    padding: 10px !important
+  }
+
+  #map {
+    width: 90% !important;
+    padding: 5px !important
+  }
+
+
+  .addroute-txtbox1,
+  .addroute-txtbox2,
+  .addroute-txtbox3,
+  .addroute-txtbox4 {
+    font-size: 95%
+  }
+
+
+
 }
