@@ -21,8 +21,8 @@ header {
 
 .header img {
   text-align: left;
-  padding-left: 80px;
-  width: 300px;
+  padding-left: 40px;
+  width: 280px;
   height: 100px;
   ;
 }
@@ -178,7 +178,7 @@ h1 {
   height: 8px;
   width: 50px;
   border-radius: 5px;
-  background:#156797;
+  background: #156797;
   transition: 0.5s;
   position: absolute;
 }
@@ -240,6 +240,7 @@ h1 {
   list-style: none;
   flex-flow: column;
   margin: auto;
+  /* width:fit-content */
 }
 
 .nav_list a {
@@ -251,7 +252,8 @@ h1 {
 .nav_list img {
   width: 40px;
   padding-left: 10px;
-  ; /* text-decoration: underline; */
+  ;
+  /* text-decoration: underline; */
 }
 
 
@@ -334,18 +336,11 @@ padding-left:0px;
 
 
 /* ----------------------------------------------------↓　ここからadd?route.htmlのcss------------- */
-@media screen and (max-width:480px) {
-  header {
-    width: 100%;
-    background-color: #fcf4b3
-  }
-
-  /*　画面サイズが480px以下の場合ここの記述が適用される　*/
-}
 
 
 .Dthego-wrap {
   vertical-align: middle;
+  width: 100%
 }
 
 
@@ -357,8 +352,18 @@ padding-left:0px;
   background-color: #deecef;
 }
 
+/* .gmap {
+  padding: 2.5%;
+} */
+
+.gmap {
+  margin: 0px;
+  padding: 0 10px 0px 0;
+  width: 140px
+}
+
 .googlemaps-wrap {
-  width: fit-content;
+  width: 100%;
   margin: auto;
   /* padding-bottom: 20px; */
   display: flex;
@@ -367,8 +372,18 @@ padding-left:0px;
   /* border: solid 2px black; */
 }
 
+.coordinates,
+.shortcut-name {
+  padding-left: 20px;
+}
+
+
+
 .personal-info {
   text-align: left;
+  padding-top: 10px;
+  ;
+  margin: 5px;
 }
 
 
@@ -390,8 +405,8 @@ padding-left:0px;
   color: #e27c7c;
   width: 80%;
   height: 110px;
-  font-size: 30px;
-  margin: 40px 10px 40px 10px
+  font-size: 20px;
+  margin: 40px 5px 40px 5px
     /* padding:20px; */
 }
 
@@ -401,8 +416,8 @@ padding-left:0px;
   color: #e27c7c;
   width: 80%;
   height: 110px;
-  font-size: 30px;
-  margin: 40px 10px 40px 10px
+  font-size: 20px;
+  margin: 40px 5px 40px 5px;
 }
 
 /* 名前 */
@@ -411,8 +426,8 @@ padding-left:0px;
   color: #adb8bc;
   width: 80%;
   height: 110px;
-  font-size: 30px;
-  margin: 40px 10px 40px 10px;
+  font-size: 20px;
+  margin: 40px 5px 40px 5px;
 }
 
 /*注意書き */
@@ -421,8 +436,8 @@ padding-left:0px;
   color: #e27c7c;
   width: 80%;
   height: 290px;
-  font-size: 30px;
-  margin: 40px 10px 20px 10px;
+  font-size: 20px;
+  margin: 40px 5px 40px 5px;
   text-align: left;
   padding-bottom: 200px;
 }
@@ -434,7 +449,7 @@ padding-left:0px;
   left: 49%;
   text-align: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   margin: auto;
   width: fit-content;
 
@@ -448,4 +463,30 @@ padding-left:0px;
   border-radius: 4px;
   margin: 20px auto;
   color: #e1ebf2;
+}
+
+
+@media screen and (max-width:480px) {
+  header {
+    width: 100%;
+    background-color: #fcf4b3
+  }
+
+  .logoimage{margin-left:-20px;}
+
+  .drawer_open {
+    right: 30px
+  }
+
+  #drawer_input:checked~.nav_content {
+    left: 0%;
+    /* メニューを画面に入れる */
+  }
+
+  .nav_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*　画面サイズが480px以下の場合ここの記述が適用される　*/
 }

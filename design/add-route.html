@@ -19,7 +19,7 @@
 
 <body>
   <header class="header">
-    <img src="./images/NUKEMICHI.png">
+    <img class ="logoimage" src="./images/NUKEMICHI.png">
     <!-- ヘッダーロゴ -->
     <div class="logo"></div>
     <!-- ハンバーガーメニュー部分 -->
@@ -68,12 +68,12 @@
         <a href="./index.html">
           <h1>home</h1>
         </a>
-        <div id="map" style="height: 500px; width: 500px;"></div>
+        <div id="map" class="gmap" style="height: 200px; width: 200px;"></div>
         <div id="coordinates1"></div>
         <div id="coordinates2"></div>
         <form action="./insert.php" method="post">
           <fieldset class="personal-info">
-            
+
             <label>
               <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
                 placeholder="抜け道の起点">
