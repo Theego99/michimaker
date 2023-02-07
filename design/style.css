@@ -321,3 +321,32 @@ padding-left:0px;
   left: 50%;
   /* メニューを画面に入れる */
 }
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------↓　ここからadd?route.htmlのcss------------- */
+
+
+.googlemaps-wrap {
+  display: flex;
+  vertical-align: middle;
+}
+
+.addroute-txtbox-wrap {
+  text-align: center;
+}
+
+
+.addroute-txtbox {
+  background-color: #f0a0a1;
+  color: #e27c7c;
+  width: 300px;
+  font-size: 30px;
+}
