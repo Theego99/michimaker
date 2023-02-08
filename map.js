@@ -18,12 +18,11 @@ function initMap() {
       draggable: true,
       title: "Drag me!",
       icon: {
-          url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+          
+          url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
       }
   });
 
-  document.getElementById("point_A").value =
-      marker1.getPosition().lat() + "," + marker1.getPosition().lng();
 
   // Create the second marker
   var marker2 = new google.maps.Marker({
@@ -32,12 +31,10 @@ function initMap() {
       draggable: true,
       title: "Drag me!",
       icon: {
-          url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
       }
   });
  
-  document.getElementById("point_B").value =
-      marker2.getPosition().lat() + ", " + marker2.getPosition().lng();
 
 
   // Add event listener for the first marker

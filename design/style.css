@@ -16,15 +16,13 @@ header {
   background-color: #fcf4b3;
   margin: auto;
   display: flex;
-  /* z-index: 1000; */
+  align-items: center;
 }
 
 .header img {
   text-align: left;
   padding-left: 40px;
-  width: 280px;
-  height: 100px;
-  ;
+  width: 28%;
 }
 
 ul {
@@ -52,19 +50,20 @@ li {
   background-color: #d9d9d9;
 }
 
-.article-wrap {
+main {
   margin: auto;
   display: flex;
-  width: fit-content;
+  width: 100%;
 }
 
 article {
   margin-top: 40px;
+  width: 70%;
 }
 
 .search-box {
   text-align: center;
-  width: 680px;
+  width: 80%;
   height: 50px;
   margin: auto;
 }
@@ -74,6 +73,8 @@ article {
   background-color: #d9d9d9;
   border: none;
   box-shadow: 0 2px 7px 0 #3333339c;
+  height: fit-content;
+  padding: 5%;
 }
 
 /* .submit-button{
@@ -94,7 +95,7 @@ input {
 }
 
 .nukemiti {
-  width: 580px;
+  width: 75%;
   margin: 40px auto;
   background-color: #dae7ed;
   /* border: solid 6px #aac5de; */
@@ -135,14 +136,6 @@ h1 {
 
 /* ----------------------------------------------------------------- */
 
-
-
-.header {
-  /* display: flex; */
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fcf4b3
-}
 
 .logo {
   font-size: 24px;

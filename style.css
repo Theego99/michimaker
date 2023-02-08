@@ -1,7 +1,227 @@
-/* basic styling */
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e2633;
+    width: 100vw;
+    margin: auto;
+}
+
+/* menu */
+header {
+    position: sticky;
+    top:0;
+    width: 100% !important;
+    height: 100px;
+    text-align: center;
+    background-color: #fcf4b3;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+
+
+.logoimage {
+    padding-left: 4%;
+    height: 60%;
+    width: auto;
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    justify-content: space-between;
+}
+
+li {
+    padding: 20px 20px 20px 21px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 100px;
+    width: 80px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 50px;
+    border-radius: 5px;
+    background: #156797;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 14px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 14px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.nav {
+    position: fixed;
+    left: 90%;
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 50%;
+    height: 100%;
+    /* のちのち大きさは微調査委する予定 */
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: 0.25s;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #469db9;
+}
+
+.nav_content {
+    text-align: center;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+    list-style: none;
+    flex-flow: column;
+    margin: auto;
+    /* width:fit-content */
+}
+
+.nav_list a {
+    text-decoration: none;
+    color: #e7f3f6;
+    font-size: 28px;
+}
+
+.nav_list img {
+    width: 40px;
+    padding-left: 10px;
+    ;
+    /* text-decoration: underline; */
+}
+
+
+
+/* 虫眼鏡アイコン設定 */
+.nav_list,
+.musimegame {
+    display: flex;
+    /* text-align: center; */
+    vertical-align: middle;
+    margin: 20px;
+}
+
+.musimegame {
+    border-bottom: solid 3px;
+}
+
+/* .nav_list .musimegame:nth-child(2){
+  padding-left:0px;
+  } */
+
+/* 上下矢印アイコン設定 */
+.zyouge-yazirusi {
+    display: flex;
+    border-bottom: solid 3px;
+}
+
+.zyouge-yazirusi img:nth-child(1) {
+    margin-right: 0px;
+    ;
+}
+
+.zyouge-yazirusi img:nth-child(2) {
+    margin-left: 0px;
+    padding-left: 0px;
+    ;
+}
+
+/* ヒトアイコン設定 */
+.hito {
+    display: flex;
+    border-bottom: solid 3px;
+}
+
+/* 地球儀アイコン設定 */
+.tikyuugi {
+    display: flex;
+    border-bottom: solid 3px;
+}
+
+.nav_content .nav_item {
+    width: 300px;
+    height: 70px;
+    /* margin-left: 30px; */
+    /* align-items:center; */
+}
+
+.nav_item {
+    width: 300px;
+    height: 70px;
+    /* margin-left:20px;
+    padding-left: 20px;; */
+}
+
+
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked~.nav_content {
+    left: 50%;
+    /* メニューを画面に入れる */
 }
 
 /* login container */
@@ -19,6 +239,35 @@ form {
     display: flex;
     flex-wrap: wrap;
 }
+.shortcut-info{
+    border: none;
+}
+.coordinates{
+    border: none;
+    border-radius: 2px;
+}
+
+.shortcut-name{
+    background-color: #dae7ed;
+    border: none;
+}
+#point_A{
+    background-color: #f0a0a1;
+    border: none;
+}
+#point_A::placeholder{
+    font-weight: 800;
+    color:#e27878
+}
+
+#point_B{
+    background-color: #7ec6de;
+    border: none;
+}
+#point_B::placeholder{
+    font-weight: 800;
+    color: #4ea0c9;
+}
 
 label {
     width: 100%;
@@ -31,32 +280,77 @@ input[type="password"] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid #ccc;
     border-radius: 4px;
 }
 
-input[type="submit"] {
-    width: 100%;
-    background-color: #4CAF50;
+#submitBtn{
+    background-color: #166898;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
+    padding: 1% 4%;
+}
+#submitBtn:hover{
+    background-color: rgb(17, 87, 127);
+    transition: 0.3s;
     cursor: pointer;
 }
-
-input[type="submit"]:hover {
-    background-color: #45a049;
+#shortcut-name::placeholder{
+    font-weight: 800;
+    color:#a3aeb2
 }
 
 /* media queries to make page responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+
     label {
         flex-basis: 100%;
     }
+
     input[type="text"],
     input[type="password"] {
         flex-basis: 100%;
+    }
+
+    header {
+        position: fixed;;
+        width: 100%;
+        height: 10%;
+        background-color: #fcf4b3
+    }
+    main{
+        padding-top: 20%;
+    }
+
+    .nav_content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logoimage {
+        padding-left: 8%;
+        height: 60%;
+    }
+
+    .drawer_open {
+        right: 50px;
+        padding-left: 0px;
+    }
+
+    #drawer_input:checked~.nav_content {
+        left: 0%;
+        /* メニューを画面に入れる */
+    }
+
+    .home-button {
+        padding: 10px !important;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .logoimage {
+       
+        height: 40%;
     }
 }
