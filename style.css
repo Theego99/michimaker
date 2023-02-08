@@ -130,9 +130,6 @@ li {
     background-color: #469db9;
 }
 
-.nav_content {
-    text-align: center;
-}
 
 /* メニュー黒ポチを消す */
 .nav_list {
@@ -175,21 +172,12 @@ li {
   } */
 
 /* 上下矢印アイコン設定 */
-.zyouge-yazirusi {
+.arrow {
     display: flex;
     border-bottom: solid 3px;
+    margin-right: 3px;
 }
 
-.zyouge-yazirusi img:nth-child(1) {
-    margin-right: 0px;
-    ;
-}
-
-.zyouge-yazirusi img:nth-child(2) {
-    margin-left: 0px;
-    padding-left: 0px;
-    ;
-}
 
 /* ヒトアイコン設定 */
 .hito {
@@ -202,21 +190,10 @@ li {
     display: flex;
     border-bottom: solid 3px;
 }
-
-.nav_content .nav_item {
-    width: 300px;
-    height: 70px;
-    /* margin-left: 30px; */
-    /* align-items:center; */
-}
-
 .nav_item {
     width: 300px;
-    height: 70px;
-    /* margin-left:20px;
-    padding-left: 20px;; */
+    height: fit-content;
 }
-
 
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -235,17 +212,25 @@ li {
     box-shadow: 0 0 10px #ccc;
 }
 
+main{
+    width: 70%;
+   
+    margin: auto;
+     margin-top: 100px !important;
+}
 /* map style */
 #map {
-    height: 500px;
-    width: 500px;
-    margin: 5%;
+    width: 50vw;
+    height: 30vw;
+    padding: 2%;
+    margin: 2%;
 }
-
+.map-box{
+    display: flex;
+}
 /* form styling */
 form {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .shortcut-info {
@@ -289,6 +274,7 @@ label {
 
 input[type="text"],
 input[type="password"] {
+    max-width: 350px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -333,12 +319,8 @@ input[type="password"] {
         height: 10%;
         background-color: #fcf4b3
     }
-
-    main {
-        padding-top: 20%;
-    }
-    .nav{
-        /* top:-5%; */
+    main{
+        margin-top: 10%;
     }
     .nav_content {
         width: 100%;
@@ -380,10 +362,16 @@ input[type="password"] {
         height: 8%;
         background-color: #fcf4b3
     }
+    main{
+        margin-top: 8%;
+    }
 }
 
 @media screen and (max-width:250px){
     header{
         height: 6%;
+    }
+    main{
+        margin-top: 6%;
     }
 }
