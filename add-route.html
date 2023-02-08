@@ -67,13 +67,13 @@
                     <div class="input-container">
                         <label>
                             <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
-                                placeholder="起点">
+                                placeholder="起点" oninput="validateInput()">
                             <small id="msg"></small>
                             <small id="point_a-decimal"></small>
                         </label>
                         <label>
                             <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
-                                placeholder="終点">
+                                placeholder="終点" oninput="validateInput()">
                             <small id="msg2"></small>
                             <small id="point_b-decimal"></small>
                         </label>
@@ -82,8 +82,8 @@
                                 placeholder="抜け道の名前">
                         </label>
                         <label>
-                            <input type="text" name="shortcut-info" id="shortcut-info" class="shortcut-name" maxlength="127"
-                                placeholder="注意書き(任意)">
+                            <textarea name="shortcut-info" id="shortcut-info" class="shortcut-name" rows="5"
+                                placeholder="注意書き(任意)"></textarea>
                         </label>
                     </div>
                 </div>

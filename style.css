@@ -115,18 +115,17 @@ li {
 
 /* メニューのデザイン*/
 .nav_content {
-    width: 50%;
+    width: 37%;
+    margin-left: 13%;
     height: 100%;
-    /* のちのち大きさは微調査委する予定 */
     position: fixed;
     top: 0;
     left: 100%;
-    /* メニューを画面の外に飛ばす */
     z-index: 99;
     background: #fff;
     transition: 0.25s;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5%;
     background-color: #469db9;
 }
 
@@ -148,10 +147,10 @@ li {
 .nav_list img {
     width: 40px;
     padding-left: 10px;
-    ;
-    /* text-decoration: underline; */
 }
-
+.nav_list div{
+    margin: auto;
+}
 
 
 /* 虫眼鏡アイコン設定 */
@@ -190,9 +189,11 @@ li {
     display: flex;
     border-bottom: solid 3px;
 }
+
 .nav_item {
     width: 300px;
     height: fit-content;
+    margin: 0 auto;
 }
 
 
@@ -212,34 +213,50 @@ li {
     box-shadow: 0 0 10px #ccc;
 }
 
-main{
+main {
     width: 70%;
-   
+
     margin: auto;
-     margin-top: 100px !important;
+    margin-top: 100px !important;
 }
+
 /* map style */
 #map {
-    width: 50vw;
-    height: 30vw;
+    width: 100%;
+    height: 0;
     padding: 2%;
-    margin: 2%;
+    padding-bottom: 40%;
+    margin: 1%;
+    margin-right: 14%;
+    border: solid 3px #4ea0c9;
 }
-.map-box{
+
+.map-box {
     display: flex;
 }
+
 /* form styling */
 form {
     display: flex;
 }
 
-.shortcut-info {
+fieldset {
     border: none;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container label {
+    margin: auto;
 }
 
 .coordinates {
-    border: none;
-    border-radius: 2px;
+    width: 80% !important;
 }
 
 .shortcut-name {
@@ -273,10 +290,11 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
-    max-width: 350px;
+input[type="password"],
+#shortcut-info {
+    /* max-width: 350px; */
     width: 100%;
-    padding: 12px 20px;
+    padding: 5% 4%;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 4px;
@@ -286,8 +304,9 @@ input[type="password"] {
     background-color: #166898;
     color: white;
     border: none;
-    border-radius: 3px;
-    padding: 1% 4%;
+    border-radius: 8px;
+    padding: 1.2% 10%;
+    margin-left: 68%;
 }
 
 #submitBtn:hover {
@@ -296,12 +315,38 @@ input[type="password"] {
     cursor: pointer;
 }
 
-#shortcut-name::placeholder {
+.shortcut-name::placeholder {
     font-weight: 800;
     color: #a3aeb2
 }
 
 /* media queries to make page responsive */
+@media only screen and (max-width: 800px) {
+    #map {
+        padding-bottom: 50%;
+    }
+
+    .nav_content {
+        width: 50%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #map {
+        padding-bottom: 60%;
+    }
+
+    .nav_content {
+        width: 60%;
+    }
+
+    #drawer_input:checked~.nav_content {
+        left: 41%;
+        /* メニューを画面に入れる */
+    }
+}
+
 @media screen and (max-width: 520px) {
 
     label {
@@ -319,12 +364,18 @@ input[type="password"] {
         height: 10%;
         background-color: #fcf4b3
     }
-    main{
+
+    main {
         margin-top: 10%;
     }
+
+    .nav {
+        margin-top: -4%;
+    }
+
     .nav_content {
         width: 100%;
-        height: 100%;
+        margin-left: 0;
     }
 
     .logoimage {
@@ -336,7 +387,6 @@ input[type="password"] {
     .drawer_open span,
     .drawer_open span:before,
     .drawer_open span:after {
-        display: block;
         height: 5px;
         width: 30px;
     }
@@ -352,26 +402,51 @@ input[type="password"] {
 
 }
 
+@media screen and (max-width:350px) {
+    .nav {
+        margin-top: -5%;
+    }
+}
+
 @media screen and (max-width: 300px) {
     .logoimage {
 
         height: 40%;
     }
+
     header {
         width: 100%;
         height: 8%;
         background-color: #fcf4b3
     }
-    main{
+
+    main {
         margin-top: 8%;
+    }
+
+    .nav {
+        margin-top: -8%;
+        margin-left: -3%;
+    }
+
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        height: 3px;
+        width: 20px;
     }
 }
 
-@media screen and (max-width:250px){
-    header{
+@media screen and (max-width:250px) {
+    header {
         height: 6%;
     }
-    main{
+
+    main {
         margin-top: 6%;
+    }
+
+    .nav {
+        margin-top: -12%;
     }
 }
