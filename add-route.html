@@ -15,6 +15,9 @@
     <script src="./map.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+    <!--ファビコンの設定-->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 </head>
 
 
@@ -59,11 +62,11 @@
     </header>
     <main>
 
-       
+
         <form action="./insert.php" method="post">
-            <fieldset class="shortcut-info"> 
+            <fieldset class="shortcut-info">
                 <div class="map-box">
-                    <div id="map" ></div>
+                    <div id="map"></div>
                     <div class="input-container">
                         <label>
                             <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
@@ -78,8 +81,8 @@
                             <small id="point_b-decimal"></small>
                         </label>
                         <label>
-                            <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name" maxlength="127"
-                                placeholder="抜け道の名前">
+                            <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name"
+                                maxlength="127" placeholder="抜け道の名前">
                         </label>
                         <label>
                             <textarea name="shortcut-info" id="shortcut-info" class="shortcut-name" rows="5"
