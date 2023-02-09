@@ -1,0 +1,89 @@
+<!-- ディエゴのhtml -->
+<!-- 書き換えないように！ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Search</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sanitize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+    <script src="./map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+</head>
+
+
+<body>
+
+    <header class="header">
+        <img class="logoimage" src="./design/images/NUKEMICHI.png">
+        <!-- ヘッダーロゴ -->
+        <div class="logo"></div>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <!-- 三本線のやつ -->
+                    <div class="musimegame">
+                        <img src="./design/images/search.svg">
+                        <li class="nav_item"><a href="">SEARCH</a></li>
+                    </div>
+                    <div class="arrow">
+                        <img src="./design/images/arrow.svg">
+                        <li class="nav_item"><a href="">NEW SHORTCUT</a></li>
+                    </div>
+
+                    <div class="hito">
+                        <img src="./design/images/user.svg">
+                        <li class="nav_item"><a href="">MY PAGE</a></li>
+                    </div>
+
+                    <div class="tikyuugi">
+                        <img src="./design/images/globe.svg">
+                        <li class="nav_item"><a href="">LANGUAGE</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <div class="search-box">
+    
+              <form action="michimaker.com" method="get">
+                <input class="search-txtbox" type="search" name="search" placeholder="    キーワードを入力">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+    
+            <div class="search-results-container">
+              <div class="search-result">
+                <h1 class="route-name">抜け道１</h1>
+                <p class="result-location">東京都・新宿区</p>
+                <p class="result-comment">意外と細いので自転車を持って通るのが大変でした</p>
+    
+              </div>
+              <div class="search-result">
+                <h1 class="route-name">抜け道２</h1>
+                <p class="result-location">東京都・渋谷区</p>
+                <p class="result-comment">意外と細いので自転車を持って通るのが大変でした</p>
+              </div>
+            </div>
+          </div>
+    </main>
+
+
+</body>
+
+</html>
