@@ -9,6 +9,10 @@ body {
     margin: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* menu */
 header {
     position: sticky;
@@ -139,7 +143,6 @@ li {
 }
 
 .nav_list a {
-    text-decoration: none;
     color: #e7f3f6;
     font-size: 28px;
 }
@@ -289,7 +292,6 @@ label {
 }
 
 input[type="text"],
-input[type="password"],
 #shortcut-info {
     /* max-width: 350px; */
     width: 100%;
@@ -417,8 +419,7 @@ input[type="password"],
         flex-basis: 100%;
     }
 
-    input[type="text"],
-    input[type="password"] {
+    input[type="text"] {
         flex-basis: 100%;
     }
 
@@ -512,5 +513,92 @@ input[type="password"],
 
     .nav {
         margin-top: -12%;
+    }
+}
+
+
+
+/* ログインページ */
+.login-header {
+    text-align: center;
+    margin-top: 3%;
+}
+
+
+.new-user-btn {
+    background-color: #4ba1d2;
+    color: white;
+    border: none;
+    border-radius: 46px;
+    padding: 11px 30px;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    width: fit-content;
+    transition: .3s;
+}
+.new-user-btn a{
+    color: white;
+}
+.new-user-btn:hover {
+    background-color: #459db9;
+    transition: 0.3s;
+}
+
+#login-form {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#login-form input {
+    width: 100%;
+    background-color: #d9d9d9;
+    padding: 3% 5%;
+    margin: 8px 2vw;
+    border: none;
+    /* box-sizing: border-box; */
+    border-radius: 4px;
+}
+
+#login-form input::placeholder {
+    font-weight: 800;
+    color: #b9b9b9;
+}
+
+#login-submitbtn {
+    background-color: #166898 !important;
+    color: white;
+    padding: 1.2% 10% !important;
+    width: fit-content !important;
+    margin-left: 37% !important;
+}
+
+@media screen and (max-width:1000px) {
+    .login-image {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #login-form input {
+        margin: 6px 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #login-form input {
+        margin: 8px 25%;
+        width: 51vw;
+    }
+
+    .new-user-btn {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .new-user-btn {
+        font-size: xx-small;
+        padding: 4px 20px;
     }
 }
