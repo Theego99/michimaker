@@ -230,7 +230,7 @@ main {
     padding-bottom: 40%;
     margin: 1%;
     margin-right: 14%;
-    border: solid 3px #4ea0c9;
+    border: solid 1px #4ea0c9;
 }
 
 .map-box {
@@ -266,6 +266,8 @@ fieldset {
     border: none;
 }
 
+
+
 #point_A {
     background-color: #f0a0a1;
     border: none;
@@ -275,7 +277,12 @@ fieldset {
     font-weight: 800;
     color: #e27878
 }
-
+.correct{
+    color: #9ed6ad;
+}
+.wrong{
+    color: #f37063;
+}
 #point_B {
     background-color: #7ec6de;
     border: none;
@@ -285,7 +292,9 @@ fieldset {
     font-weight: 800;
     color: #4ea0c9;
 }
-
+#msg, #msg2{
+    font-size: xx-large;
+}
 label {
     width: 100%;
     margin-bottom: 10px;
@@ -387,6 +396,17 @@ input[type="text"],
 
 
 /* media queries　(レスポンシブ対策)) */
+@media screen and (max-width: 1000px) {
+    .map-box{
+        flex-direction: column;
+    }
+    #map{
+        margin-bottom: 4vw;
+    }
+    #submitBtn{
+        margin-left: 50%;
+    }
+}
 @media only screen and (max-width: 800px) {
     #map {
         padding-bottom: 50%;
@@ -500,6 +520,9 @@ input[type="text"],
         height: 3px;
         width: 20px;
     }
+    #msg, #msg2{
+        font-size: large;
+    }
 }
 
 @media screen and (max-width:250px) {
@@ -572,7 +595,11 @@ input[type="text"],
     width: fit-content !important;
     margin-left: 37% !important;
 }
-
+.em{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
 @media screen and (max-width:1000px) {
     .login-image {
         width: 60%;

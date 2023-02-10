@@ -9,20 +9,19 @@ function validateInput()
   if (isValidCoordinates(point_A)) 
   {
     //if coordinates are valid and in decimal format
-    message = '✔' + " 有効";
-    //set format in invisible box to save to db
-    document.getElementById("point_a-decimal").innerHTML = roundDecimal(point_A);
+    message = '✔';
+    document.getElementById("msg").classList.remove('wrong');
+    document.getElementById("msg").classList.add('correct');
   } else {
     // convert coordinates to decimal to check if the coordinates were in a valid ddmmss format
     point_A = convertToDecimal(point_A);
     if(isValidCoordinates(point_A)){
       //if coordinates are valid in ddmmss format
-      message = '✔' + "有効";
-      //set format in invisible box to save to db
-      document.getElementById("point_a-decimal").innerHTML = point_A;
+      message = '✔';
+      document.getElementById("msg").classList.add('correct');
     }else{
-      message = '✘' + " 無効";
-      document.getElementById("point_a-decimal").innerHTML = "";
+      message = '✘';
+      document.getElementById("msg").classList.add('wrong')
     } 
   }
   document.getElementById("msg").innerHTML = message;
@@ -32,20 +31,20 @@ function validateInput()
   if (isValidCoordinates(point_B)) 
   {
     //if coordinates are valid and in decimal format
-    message = '✔' + " 有効";
-    //set format in invisible box to save to db
-    document.getElementById("point_b-decimal").innerHTML = roundDecimal(point_B);
+    message = '✔';
+    document.getElementById("msg2").classList.remove('wrong');
+    document.getElementById("msg2").classList.add('correct')
   } else {
     // convert coordinates to decimal to check if the coordinates were in a valid ddmmss format
     point_B = convertToDecimal(point_B);
     if(isValidCoordinates(point_B)){
       //if coordinates are valid in ddmmss format
-      message = '✔' + "有効";
+      message = '✔';
       //set format in invisible box to save to db
-      
+      document.getElementById("msg2").classList.add('correct')
     }else{
-      message = '✘' + " 無効";
-      document.getElementById("point_b-decimal").innerHTML = "";
+      message = '✘';
+      document.getElementById("msg2").classList.add('wrong')
     } 
   }
   document.getElementById("msg2").innerHTML = message;

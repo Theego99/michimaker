@@ -16,8 +16,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
     <!--ファビコンの設定-->
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./design/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./design/images/apple-touch-icon.png">
 </head>
 
 
@@ -63,8 +63,8 @@
     <main>
 
 
-        <form action="./insert.php" method="post">
-            <fieldset class="shortcut-info">
+        <form action="insert.php" method="post">
+            <fieldset class="shortcut-fieldset">
                 <div class="map-box">
                     <div id="map"></div>
                     <div class="input-container">
@@ -85,12 +85,13 @@
                                 maxlength="127" placeholder="抜け道の名前">
                         </label>
                         <label>
-                            <textarea name="shortcut-info" id="shortcut-info" class="shortcut-name" rows="5"
+                            <textarea name="shortcut-info" id="shortcut-info" class="shortcut-info" rows="5"
                                 placeholder="注意書き(任意)"></textarea>
                         </label>
                     </div>
                 </div>
-                <button type="submit" id="submitBtn" disabled>送信</button>
+                <button><input type="submit" value="送信" id="submitBtn"></button>
+                
             </fieldset>
         </form>
     </main>
