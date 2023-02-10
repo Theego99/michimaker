@@ -6,12 +6,6 @@ $point_B = $posts['point_B'];
 $name = $posts['shortcut-name'];
 $comments = $posts['shortcut-info'];
 
-// $dsn = 'mysql:dbname=nukemichimaker;host=localhost';
-// $user = 'root';
-// $password = '';
-
-// $dbh = new PDO($dsn, $user, $password);
-
 $mysqli = require __DIR__ . "/account_management/database.php";
 
 $sql = "INSERT INTO shortcuts (point_A, point_B, name, comments) VALUES(?, ?, ?, ?)";
