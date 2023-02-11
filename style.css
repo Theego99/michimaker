@@ -148,7 +148,7 @@ li {
 }
 
 .nav_list img {
-    width: 40px;
+    width: 13%;
     padding-left: 10px;
 }
 
@@ -215,9 +215,10 @@ li {
     box-shadow: 0 0 10px #ccc;
 }
 
-.small-logo{
+.small-logo {
     width: 20% !important;
 }
+
 main {
     width: 70%;
 
@@ -274,12 +275,15 @@ fieldset {
     font-weight: 800;
     color: #e27878
 }
-.correct{
+
+.correct {
     color: #9ed6ad;
 }
-.wrong{
+
+.wrong {
     color: #f37063;
 }
+
 #point_B {
     background-color: #7ec6de;
     border: none;
@@ -289,9 +293,12 @@ fieldset {
     font-weight: 800;
     color: #4ea0c9;
 }
-#msg, #msg2{
+
+#msg,
+#msg2 {
     font-size: xx-large;
 }
+
 label {
     width: 100%;
     margin-bottom: 10px;
@@ -305,8 +312,8 @@ input[type="text"],
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 4px;
-    border:none;
-    background:#dae7ed;
+    border: none;
+    background: #dae7ed;
 }
 
 #submitBtn {
@@ -317,11 +324,13 @@ input[type="text"],
     padding: 1.2% 10%;
     margin-left: 68%;
 }
-#submitBtn input{
+
+#submitBtn input {
     background-color: transparent;
     border: none;
     color: white;
 }
+
 #submitBtn:hover {
     background-color: rgb(17, 87, 127);
     transition: 0.3s;
@@ -332,7 +341,8 @@ input[type="text"],
     font-weight: 800;
     color: #a3aeb2
 }
-#shortcut-info::placeholder{
+
+#shortcut-info::placeholder {
     font-weight: 800;
     color: #a3aeb2
 }
@@ -404,16 +414,19 @@ input[type="text"],
 
 /* media queries　(レスポンシブ対策)) */
 @media screen and (max-width: 1000px) {
-    .map-box{
+    .map-box {
         flex-direction: column;
     }
-    #map{
+
+    #map {
         margin-bottom: 4vw;
     }
-    #submitBtn{
+
+    #submitBtn {
         margin-left: 50%;
     }
 }
+
 @media only screen and (max-width: 800px) {
     #map {
         padding-bottom: 50%;
@@ -527,7 +540,9 @@ input[type="text"],
         height: 3px;
         width: 20px;
     }
-    #msg, #msg2{
+
+    #msg,
+    #msg2 {
         font-size: large;
     }
 }
@@ -551,8 +566,8 @@ input[type="text"],
 /* ログインページ */
 .login-header {
     text-align: center;
-    margin-top: 7%;
-    padding: 6%;
+    margin-top: 3%;
+    padding: 5%ñ
 }
 
 
@@ -567,21 +582,25 @@ input[type="text"],
     width: fit-content;
     transition: .3s;
 }
-.new-user-btn a{
+
+.new-user-btn a {
     color: white;
 }
+
 .new-user-btn:hover {
     background-color: #459db9;
     transition: 0.3s;
 }
 
-#login-form, #signup-form {
+#login-form,
+#signup-form {
     display: block;
     margin: 0 auto;
     width: fit-content;
 }
 
-#login-form input, #signup-form input {
+#login-form input,
+#signup-form input {
     width: 100%;
     background-color: #d9d9d9;
     padding: 3% 5%;
@@ -590,11 +609,13 @@ input[type="text"],
     /* box-sizing: border-box; */
     border-radius: 4px;
 }
+
 #signup-form {
     width: 60% !important;
 }
 
-#login-form input::placeholder, #signup-input::placeholder {
+#login-form input::placeholder,
+#signup-input::placeholder {
     font-weight: 800;
     color: #b9b9b9;
 }
@@ -606,11 +627,13 @@ input[type="text"],
     width: fit-content !important;
     margin-left: 37% !important;
 }
-.em{
+
+.em {
     display: block;
     margin: 0 auto;
     width: fit-content;
 }
+
 @media screen and (max-width:1000px) {
     .login-image {
         width: 60%;
@@ -632,6 +655,7 @@ input[type="text"],
     .new-user-btn {
         font-size: smaller;
     }
+
     #signup-form {
         width: 20% !important;
     }
