@@ -86,8 +86,8 @@ if (isset($_POST["search"])) {
             <h1 class=\"route-name\">%s</h1>
             <p class=\"result-location\">%s</p>
             <p class=\"result-comment\">%s</p>
-            <p id=\"point_a\" style=\"display:none;\"> %s</p>
-            <p id=\"point_b\" style=\"display:none;\"> %s</p>
+            <p id=\"result-point_a\" style=\"display:none;\"> %s</p>
+            <p id=\"result-point_b\" style=\"display:none;\"> %s</p>
           </div>
         </div>",
         $r["name"],
