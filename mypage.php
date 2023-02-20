@@ -89,22 +89,6 @@ if (isset($_SESSION["user_id"])) {
     
     <?php endif; ?>
     
-    <?php
-    if (isset($user)) {
-        // User is logged in, display information and logout link
-    ?>
-        <p>こんにちは、 <?= htmlspecialchars($user["name"]) ?></p>
-        <p><?= htmlspecialchars($user["email"]) ?></p>
-        <p><?= htmlspecialchars($user["id"]) ?></p>
-        <p><a href="./account_management/logout.php">ログアウト</a></p>
-    <?php
-    } else {
-        // User is not logged in, redirect to login page
-        header('Location: ./account_management/login.php');
-        exit;
-    }
-    ?>
-
 
     <!-- reset password -->
     <?php
