@@ -5,16 +5,16 @@ main{width: 80%;
   margin: auto;}
 .user-box{display: flex;}
 .user-icon{
-  width: 20%;
-  border-radius: 50px;}
+  width: 30%;
+  height: 30%;
+  border-radius: 20%;}
 .user-name{
-  margin: 5%;}
+  margin-left: 10px;
+}
 .profile-data{
   margin: 5% 0;
   display: flex;}
-.profile-data h3{
-  margin: 10px;
-}
+.profile-data h3{margin: 10px;}
 .user-route{
   width: 80%;
   border-radius: 50px;
@@ -41,4 +41,25 @@ main{width: 80%;
 .result-comment {
   color: #2c4588;
   padding-left: 10%;}
+
+/* media queries　(レスポンシブ対策)) */
+@media screen and (max-width: 1000px) {
+  .profile {flex-direction: column;}
+  .user-box {margin-bottom: 4vw;}
+  #submitBtn {margin-left: 50%;}}
+@media only screen and (max-width: 800px) {
+  .nav_content {
+    width: 50%;
+    margin-left: 0;}}
+@media only screen and (max-width: 600px) {
+  .nav_content {width: 60%;}}
+@media screen and (max-width: 520px) {
+  label {flex-basis: 100%;}
+  input[type="text"] {flex-basis: 100%;}
+  main {margin-top: 10%;}}
+@media screen and (max-width:350px) {.nav {margin-top: -5%;}}
+@media screen and (max-width: 300px) {
+  .logoimage {height: 40%;}
+  main {margin-top: 8%;}}
+@media screen and (max-width:250px) {main {margin-top: 6%;}}
 
