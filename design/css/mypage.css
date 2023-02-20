@@ -1,0 +1,48 @@
+
+.mypage-body{
+  background-color: #d9d9d9;
+}
+
+.user-route{
+  width: 80%;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.user-page h2{
+  
+}
+
+.search-result {
+  width: 75%;
+  margin: 40px auto;
+  background-color: #dae7ed;
+  /* border: solid 6px #aac5de; */
+  border: none;
+  border-radius: 39px;
+  box-shadow: 0 2px 7px 0 #1e232581;
+  padding: 8px;
+}
+
+.search-result:hover {
+  box-shadow: none;
+  box-shadow: inset 2px 0 7px 0 #1e232581;
+  border: none;
+}
+
+
+.route-name {
+  color: #0000fe;
+  padding-left: 10%;
+}
+
+.result-location {
+  color: #091350;
+  padding-left: 10%;
+}
+
+.result-comment {
+  color: #2c4588;
+  padding-left: 10%;
+}
+
