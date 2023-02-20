@@ -101,4 +101,3 @@ if (isset($_POST["search"])) {
     echo "No results found";
   }
 }
-?>

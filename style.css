@@ -420,6 +420,67 @@ input[type="text"],
     font-weight: bold;
 }
 
+/* 検索結果のポップアップまっぷ */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #fef8f1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%; /* set a fixed width to control the size of the popup */
+    max-width: 600px;
+  }
+  
+  .popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .popup .map-box {
+    width: 100%; /* set the map and info box to fill the entire width of the popup */
+    display: flex; /* use flexbox to control the layout */
+    flex-wrap: wrap; /* allow the elements to wrap on smaller screens */
+  }
+  .popup .map-box > * {
+    width: 100%; /* set the map and info box to fill the entire width of their container */
+    margin-bottom: 10px; /* add some spacing between the elements */
+  }
+  .popup #map {
+    height: 300px; /* set a fixed height for the map */
+  }
+
+  #route-name {
+    color: #0000fe;
+    padding-left: 10%;
+}
+
+#location {
+    color: #091350;
+    padding-left: 10%;
+    font-weight: 600;
+}
+
+#comment {
+    color: #2c4588b5;
+    padding-left: 10%;
+    font-weight: bold;
+}
 
 /* media queries　(レスポンシブ対策)) */
 @media screen and (max-width: 1000px) {
