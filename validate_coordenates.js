@@ -1,73 +1,82 @@
+
+let pointAField = document.getElementById("point_A");
+let pointBField = document.getElementById("point_B");
+pointAField.addEventListener("input", validateInput);
+pointBField.addEventListener("input", validateInput);
 //validate input
-function validateInput() 
-{
+function validateInput() {
+  valid = [true, true]
+  msg = document.getElementById("msg");
+  msg2 = document.getElementById("msg2");
   //validate point a 
   let point_A = document.getElementById("point_A").value;
   console.log(point_A);
   let message = "";
-  
-  if (isValidCoordinates(point_A)) 
-  {
+
+  if (isValidCoordinates(point_A)) {
     //if coordinates are valid and in decimal format
     message = '✔';
-    document.getElementById("msg").classList.remove('wrong');
-    document.getElementById("msg").classList.add('correct');
+    msg.classList.remove('wrong');
+    msg.classList.add('correct');
   } else {
+    valid[0] = false;
     // convert coordinates to decimal to check if the coordinates were in a valid ddmmss format
     point_A = convertToDecimal(point_A);
-    if(isValidCoordinates(point_A)){
+    if (isValidCoordinates(point_A)) {
       //if coordinates are valid in ddmmss format
       message = '✔';
-      document.getElementById("msg").classList.add('correct');
-    }else{
+      msg.classList.add('correct');
+    } else {
       message = '✘';
-      document.getElementById("msg").classList.add('wrong')
-    } 
+      msg.classList.add('wrong')
+    }
   }
-  document.getElementById("msg").innerHTML = message;
-
+  msg.innerHTML = message;
   //validate point b
   let point_B = document.getElementById("point_B").value;
-  if (isValidCoordinates(point_B)) 
-  {
+  if (isValidCoordinates(point_B)) {
     //if coordinates are valid and in decimal format
     message = '✔';
-    document.getElementById("msg2").classList.remove('wrong');
-    document.getElementById("msg2").classList.add('correct')
+    msg2.classList.remove('wrong');
+    msg2.classList.add('correct')
   } else {
+    valid[1] = false;
     // convert coordinates to decimal to check if the coordinates were in a valid ddmmss format
     point_B = convertToDecimal(point_B);
-    if(isValidCoordinates(point_B)){
+    if (isValidCoordinates(point_B)) {
       //if coordinates are valid in ddmmss format
       message = '✔';
       //set format in invisible box to save to db
-      document.getElementById("msg2").classList.add('correct')
-    }else{
+      msg2.classList.add('correct')
+    } else {
       message = '✘';
-      document.getElementById("msg2").classList.add('wrong')
-    } 
+      msg2.classList.add('wrong')
+    }
   }
-  document.getElementById("msg2").innerHTML = message;
+  msg2.innerHTML = message;
+
+  //座標が正しければボタンを有効にする
+  checkInput();
 }
 
 
 //check if input is valid coordinates
 function isValidCoordinates(coordinates) {
   var pattern = /^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$/;
-  if (!pattern.test(coordinates)){
+  if (!pattern.test(coordinates)) {
     console.log("wrong pattern");
-      return false;
+    return false;
   }
   var parts = coordinates.split(",");
   var lat = parseFloat(parts[0]);
   var lng = parseFloat(parts[1]);
-  if(lat < -90 || lat > 90) {
+  if (lat < -90 || lat > 90) {
     console.log("wrong latitude value");
-      return false;
+    return false;
   }
-  if(lng < -180 || lng > 180) {
+  if (lng < -180 || lng > 180) {
     console.log("wrong longitude value");
-      return false;
+    return false;
   }
   return true;
 }
@@ -82,11 +91,11 @@ function roundDecimal(coordinates) {
 }
 
 //convert degrees minutes seconds coordinates to decimal format
-function convertToDecimal(coordinates){
+function convertToDecimal(coordinates) {
   var pattern = /^(\d{1,2})\D+(\d{1,2})\D+(\d{1,2}\.\d+)\D+([NS])\D+(\d{1,3})\D+(\d{1,2})\D+(\d{1,2}\.\d+)\D+([EW])$/;
   var parts = pattern.exec(coordinates);
   if (!parts) {
-      return null;
+    return null;
   }
   var latDegrees = parseFloat(parts[1]);
   var latMinutes = parseFloat(parts[2]);
@@ -99,25 +108,19 @@ function convertToDecimal(coordinates){
   var lat = latDegrees + (latMinutes / 60) + (latSeconds / 3600);
   var lng = lngDegrees + (lngMinutes / 60) + (lngSeconds / 3600);
   if (latHemisphere === "S") {
-      lat = lat * -1;
+    lat = lat * -1;
   }
   if (lngHemisphere === "W") {
-      lng = lng * -1;
+    lng = lng * -1;
   }
   return (lat.toFixed(6) + "," + lng.toFixed(6));
 }
 
-
-
-//disable sumbit button until all input data is valid
-function checkInput(){
+function checkInput() {
   var submitBtn = document.getElementById("submitBtn");
-  var msg = document.getElementById("msg").innerHTML;
-  var msg2 = document.getElementById("msg2").innerHTML;
-  if(msg.includes("有効") && msg2.includes("有効")){
-submitBtn.disabled = false;
-  }else{
+  if (valid[0] && valid[1]) {
+    submitBtn.disabled = false;
+  } else {
     submitBtn.disabled = true;
   }
 }
-

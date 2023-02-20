@@ -1,29 +1,4 @@
 <?php
-
-if (empty($_POST["name"])) {
-    die("名前を入力してください");
-}
-
-if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-    die("有効なメールアドレスを入力してください");
-}
-
-if (strlen($_POST["password"]) < 8) {
-    die("８文字以上のパスワードを入力してください");
-}
-
-if ( ! preg_match("/[a-z]/i", $_POST["password"])) {
-    die("パスワードにローマ字を一つ以上入力してください");
-}
-
-if ( ! preg_match("/[0-9]/", $_POST["password"])) {
-    die("パスワードに数字を一つ以上入力してください");
-}
-
-if ($_POST["password"] !== $_POST["password_confirmation"]) {
-    die("パスワードは一致しません");
-}
-
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
@@ -44,7 +19,7 @@ $stmt->bind_param("sss",
                   
 if ($stmt->execute()) {
 
-    header("Location: signup-success.html");
+    header("Location: signup-success.php");
     exit;
     
 } else {

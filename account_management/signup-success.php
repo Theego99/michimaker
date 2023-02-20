@@ -54,7 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img class="login-image" src="../design/images/NUKEMICHI_login.png">
     </div>
 
-    <h2 class="new-user-btn"><a href="./signup.html">新規登録はこちら</a></h2>
+    <h2 class="signup-completeBtn">登録に成功しました！</h2>
+    <h3 class="signup-completeBtn">ログインしてください</h3>
 
 
 

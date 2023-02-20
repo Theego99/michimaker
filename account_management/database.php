@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$dbname = "nukemichimaker";
-$username = "root";
-$password = "";
+$host = "testdiegoalonsowa5fg4.mysql.database.azure.com";
+$dbname = "michimaker";
+$username = "michimaker_admin";
+$password = "ganarcielo123.";
 
 $mysqli = new mysqli(hostname: $host,
                      username: $username,

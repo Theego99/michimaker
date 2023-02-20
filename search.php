@@ -1,10 +1,10 @@
 <?php
 $mysqli = require __DIR__ . "/account_management/database.php";
 
-// (C) SEARCH
-$stmt = $mysqli->prepare("select * from shortcuts where name like ? or comments like ?;");
+// 検索
+$stmt = $mysqli->prepare("select * from shortcuts where name like ? or comments like ? or address like ?;");
 
-$stmt->execute(["%".$_POST["search"]."%", "%".$_POST["search"]."%"]);
+$stmt->execute(["%".$_POST["search"]."%", "%".$_POST["search"]."%", "%".$_POST["search"]."%"]);
 $resultSet = $stmt->get_result();
 $results = $resultSet->fetch_All(MYSQLI_ASSOC);
 if (isset($_POST["ajax"])) {

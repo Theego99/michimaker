@@ -53,7 +53,7 @@ if (isset($_SESSION["user_id"])) {
                     <!-- 三本線のやつ -->
                     <div class="musimegame">
                         <img src="./design/images/search.svg">
-                        <li class="nav_item"><a href="search-test.php">SEARCH</a></li>
+                        <li class="nav_item"><a href="search-page.php">SEARCH</a></li>
                     </div>
                     <div class="arrow">
                         <img src="./design/images/arrow.svg">

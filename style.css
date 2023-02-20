@@ -215,6 +215,12 @@ li {
     box-shadow: 0 0 10px #ccc;
 }
 
+.message-error {
+    color: red;
+    padding: 0 5%;
+    margin: 0;
+}
+
 .small-logo {
     width: 20% !important;
 }
@@ -354,7 +360,7 @@ input[type="text"],
     text-align: center;
     width: 80%;
     height: 50px;
-    margin: auto;
+    margin: 3% auto;
 }
 
 
@@ -365,6 +371,7 @@ input[type="text"],
     width: 80%;
     height: fit-content;
     padding: 2%;
+    padding-right: 4%;
     margin: auto;
 }
 
@@ -373,10 +380,10 @@ input[type="text"],
     border: none;
     background: none;
     position: relative;
-    /* margin-left: -35px; */
-    /* margin: auto; */
     right: 12%;
+    cursor: pointer;
 }
+
 
 .search-result {
     width: 75%;
@@ -404,11 +411,13 @@ input[type="text"],
 .result-location {
     color: #091350;
     padding-left: 10%;
+    font-weight: 600;
 }
 
 .result-comment {
-    color: #2c4588;
+    color: #2c4588b5;
     padding-left: 10%;
+    font-weight: bold;
 }
 
 
@@ -435,6 +444,14 @@ input[type="text"],
     .nav_content {
         width: 50%;
         margin-left: 0;
+    }
+
+    .search-box button {
+        right: 16%;
+    }
+
+    .search-txtbox {
+        padding: 5%;
     }
 }
 
@@ -466,7 +483,7 @@ input[type="text"],
     header {
         position: fixed;
         width: 100%;
-        height: 10%;
+        height: 75px;
         background-color: #fcf4b3
     }
 
@@ -505,6 +522,9 @@ input[type="text"],
         padding: 10px !important;
     }
 
+    .search-box {
+        margin-top: 100px !important;
+    }
 }
 
 @media screen and (max-width:350px) {
@@ -592,6 +612,13 @@ input[type="text"],
     transition: 0.3s;
 }
 
+.signup-completeBtn {
+    color: #459db9;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    width: fit-content;
+}
+
 #login-form,
 #signup-form {
     display: block;
@@ -602,7 +629,7 @@ input[type="text"],
 #login-form input,
 #signup-form input {
     width: 100%;
-    background-color: #d9d9d9;
+    background-color: #e8f0fe;
     padding: 3% 5%;
     margin: 8px 2vw;
     border: none;
@@ -659,11 +686,33 @@ input[type="text"],
     #signup-form {
         width: 20% !important;
     }
+
+
 }
 
 @media screen and (max-width:300px) {
     .new-user-btn {
         font-size: xx-small;
         padding: 4px 20px;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .nav_item {
+        width: 35vw;
+    }
+
+    .nav_list a {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .nav_item {
+        width: 30vw;
+    }
+
+    .nav_list a {
+        font-size: 42px;
     }
 }

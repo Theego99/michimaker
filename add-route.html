@@ -8,8 +8,8 @@
     <title>nukemichi maker hp</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./sanitize.css">
-    <script src="./validate_coordenates.js"></script>
-    <script src="./map.js"></script>
+    <script defer src="./validate_coordenates.js?v=3"></script>
+    <script src="./map.js?v=2"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
     <!--ファビコンの設定-->
@@ -37,7 +37,7 @@
                     <!-- 三本線のやつ -->
                     <div class="musimegame">
                         <img src="./design/images/search.svg">
-                        <li class="nav_item"><a href="search-test.php">SEARCH</a></li>
+                        <li class="nav_item"><a href="search-page.php">SEARCH</a></li>
                     </div>
                     <div class="arrow">
                         <img src="./design/images/arrow.svg">
@@ -60,23 +60,24 @@
     <main>
 
 
-        <form action="insert.php" method="post">
+        <form action="./insert.php" method="post">
             <fieldset class="shortcut-fieldset">
                 <div class="map-box">
                     <div id="map"></div>
                     <div class="input-container">
                         <label>
                             <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
-                                placeholder="起点" oninput="validateInput()">
+                                placeholder="起点">
                             <small id="msg"></small>
                             <small id="point_a-decimal"></small>
                         </label>
                         <label>
                             <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
-                                placeholder="終点" oninput="validateInput()">
+                                placeholder="終点">
                             <small id="msg2"></small>
                             <small id="point_b-decimal"></small>
                         </label>
+                        <input type="text" name="address" id="address" ></input>
                         <label>
                             <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name"
                                 maxlength="127" placeholder="抜け道の名前" required>
@@ -87,8 +88,8 @@
                         </label>
                     </div>
                 </div>
-                <button id="submitBtn"><input type="submit" placeholder="送信"></button>
-                
+                <input id="submitBtn" type="submit" placeholder="送信">
+
             </fieldset>
         </form>
     </main>

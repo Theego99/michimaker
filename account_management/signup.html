@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../sanitize.css">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
-    <script src="/js/validation.js" defer></script>
+    <script defer src="./js/validation.js" defer></script>
     <link rel="stylesheet" href="../style.css">
     <!--ファビコンの設定-->
     <link rel="shortcut icon" href="../design/images/favicon.ico">
@@ -19,13 +19,11 @@
     </div>
 
     <form action="process-signup.php" method="post" id="signup-form" novalidate>
-        <input type="text" id="name" name="name" placeholder="名前">
-        <input type="email" id="email" name="email" placeholder="メールアドレス">
-        <input type="password" id="password" name="password" placeholder="パスワード">
-        <input type="password" id="password_confirmation" name="password_confirmation" placeholder="パスワード確認">
-        </div>
-
-        <input id="login-submitbtn" type="submit" value="登録">
+        <label for="name"><input type="text" id="name" name="name" placeholder="名前" required></label>
+        <label for="email"><input type="email" id="email" name="email" placeholder="メールアドレス" required></label>
+        <label for="password"><input type="password" id="password" name="password" placeholder="パスワード" required></label>
+        <label for="password_confirmation"><input type="password" id="password_confirmation" name="password_confirmation" placeholder="パスワード確認" required></label>
+        <input id="login-submitbtn" type="submit" name="submit" value="登録">
         <!-- <br>
         <button id="google-signup">Googleで登録</button>
         <button id="facebook-signup">Facebookで登録</button> -->
