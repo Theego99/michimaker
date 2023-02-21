@@ -1,33 +1,59 @@
+@charset "UTF-8";
 
-body{background-color: #d9d9d9;}
-
+body,h1,h2,h3,h4,p,ul,ol{
+  margin: 0;
+  padding: 0;}
+ul,li {list-style: none;}
+a{text-decoration: none;}
+* {box-sizing: border-box;}
+body {
+	font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  line-height: 1.8;
+  color: #156897;
+  background-color: #d9d9d9;}
 main{width: 80%;
   margin: auto;}
-.user-box{display: flex;}
+h1{font-size: 2.5rem;}
+h2{font-size: 1.5rem;}
+@media screen and (max-width:1050px) {
+  h1{font-size: 2rem;}
+  h2{font-size: 1.3rem;}}
+@media screen and (max-width:850px) {
+  h1{font-size: 1.5rem;}
+  h2{font-size: 1rem;}}
+@media screen and (max-width:650px) {
+  h1{font-size: 1rem;}
+  h2{font-size: 0.8rem;}}
+@media screen and (max-width:450px) {
+  .user-name h1{font-size: 0.7rem;}
+  .user-name h2{font-size: 0.5rem;}}
+.user-box{
+  display: flex;
+  padding: 3%;}
 .user-icon{
   width: 30%;
   height: 30%;
   border-radius: 20%;}
 .user-name{
-  margin-left: 10px;
-}
-.profile-data{
-  margin: 5% 0;
-  display: flex;}
-.profile-data h3{margin: 10px;}
+  width: 50%;
+  height: 30%;
+  padding: 5%;
+  font-size: 90%;}
+
 .user-route{
   width: 80%;
   border-radius: 50px;
   background-color: #fff;
-  padding: 5px;}
+  padding: 1%;}
+.user-route h2{margin:30px;}
 .search-result {
   width: 75%;
-  margin: 40px auto;
+  margin: 1rem auto 3rem;
   background-color: #dae7ed;
   border: none;
   border-radius: 39px;
   box-shadow: 0 2px 7px 0 #1e232581;
-  padding: 8px;}
+  padding: 0.5rem;}
 .search-result:hover {
   box-shadow: none;
   box-shadow: inset 2px 0 7px 0 #1e232581;
@@ -41,25 +67,3 @@ main{width: 80%;
 .result-comment {
   color: #2c4588;
   padding-left: 10%;}
-
-/* media queries　(レスポンシブ対策)) */
-@media screen and (max-width: 1000px) {
-  .profile {flex-direction: column;}
-  .user-box {margin-bottom: 4vw;}
-  #submitBtn {margin-left: 50%;}}
-@media only screen and (max-width: 800px) {
-  .nav_content {
-    width: 50%;
-    margin-left: 0;}}
-@media only screen and (max-width: 600px) {
-  .nav_content {width: 60%;}}
-@media screen and (max-width: 520px) {
-  label {flex-basis: 100%;}
-  input[type="text"] {flex-basis: 100%;}
-  main {margin-top: 10%;}}
-@media screen and (max-width:350px) {.nav {margin-top: -5%;}}
-@media screen and (max-width: 300px) {
-  .logoimage {height: 40%;}
-  main {margin-top: 8%;}}
-@media screen and (max-width:250px) {main {margin-top: 6%;}}
-
