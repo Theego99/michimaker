@@ -6,7 +6,7 @@ $point_B = $posts['point_B'];
 $name = $posts['shortcut-name'];
 $comments = $posts['shortcut-info'];
 $address = $posts['address'];
-
+$user_id = $_SESSION['user_id']; 
 
 $mysqli = require __DIR__ . "/account_management/database.php";
 
