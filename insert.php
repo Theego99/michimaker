@@ -6,32 +6,30 @@ $point_B = $posts['point_B'];
 $name = $posts['shortcut-name'];
 $comments = $posts['shortcut-info'];
 $address = $posts['address'];
+$user_id = $_SESSION['user_id']; 
 
 $mysqli = require __DIR__ . "/account_management/database.php";
 
-$sql = "INSERT INTO shortcuts (point_A, point_B, name, comments, address) VALUES(?, ?, ?, ?, ?)";
+$sql = "INSERT INTO shortcuts (point_A, point_B, name, comments, address, user_id) VALUES (?, ?, ?, ?, ?, ?)";
 
-//execute query
 $stmt = $mysqli->stmt_init();
 
-if ( ! $stmt->prepare($sql)) {
+if (!$stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 
-$stmt->bind_param("sssss",
+$stmt->bind_param("sssssi",
                   $point_A,
                   $point_B,
                   $name,
                   $comments,
                   $address,
+                  $user_id
                 );
                   
 if ($stmt->execute()) {
-
     header("Location: add-route.html");
     exit;
-    
 } else {
-        die($mysqli->error . " " . $mysqli->errno);
+    die($mysqli->error . " " . $mysqli->errno);
 }
-
