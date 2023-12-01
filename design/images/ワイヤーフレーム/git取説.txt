@@ -1,0 +1,8 @@
+git、一連の流れ
+
+バージョン確認 	[ git version ]
+更新			[ git pull ]
+全選択 		[ git add . ]
+変更決定(できれば変更点を書く) 
+			[ git commit -m "～追加" ]
+アップロード		[ git push ]

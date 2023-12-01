@@ -1,0 +1,44 @@
+
+.lidiWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 120px; */
+    /* padding: 15px; */
+    background: transparent;
+    align-self: flex-end;
+}
+.lidiWrap div{
+    margin-left: 3%;
+}
+.lidiWrap.count {
+    width: 250px;
+}
+
+/* (B) LIKE-DISLIKE BUTTONS */
+.lidiUp,
+.lidiDown {
+    width: 24px;
+    height: 24px;
+    background-image: url("design/images/lidi.png");
+    cursor: pointer;
+}
+
+
+.lidiDown {
+    background-position: -48px;
+}
+
+.lidiUp.set {
+    background-position: -24px;
+}
+
+.lidiDown.set {
+    background-position: -72px;
+}
+
+/* (C) LIKE-DISLIKE COUNT */
+.lidiUpCount{
+    font-size: 18px;
+    color: #858585;
+}

@@ -1,0 +1,100 @@
+<!-- ﾏｴﾄﾓ専用 -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../sanitize.css">
+  <link rel="stylesheet" href="../design/css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>michi maker hp</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+  <!--ファビコンの設定-->
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+</head>
+
+<body>
+  <a href="https://michimaker.com"></a>
+
+  <header class="header">
+    <img src="./images/NUKEMICHI.png">
+    <!-- ヘッダーロゴ -->
+    <div class="logo"></div>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+      <!-- ハンバーガーアイコン -->
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+      <!-- メニュー -->
+      <nav class="nav_content">
+        <ul class="nav_list">
+          <!-- 三本線のやつ -->
+          <div class="musimegame">
+            <img src="./images/search.svg">
+            <li class="nav_item"><a href="">SEARCH</a></li>
+          </div>
+          <div class="zyouge-yazirusi">
+            <img src="./images/arrow.svg">
+            <li class="nav_item"><a href="">NEW SHORTCUT</a></li>
+          </div>
+
+          <div class="hito">
+            <img src="./images/user.svg">
+            <li class="nav_item"><a href="">MY PAGE</a></li>
+          </div>
+
+          <div class="tikyuugi">
+            <img src="./images/globe.svg">
+            <li class="nav_item"><a href="">LANGUAGE</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- <img src="./images/虫眼鏡アイコン.png"> -->
+
+  <main class="article-wrap">
+    <article>
+      <div>
+        <div class="search-box">
+
+          <form action="michimaker.com" method="get">
+            <input class="search-txtbox" type="search" name="search" placeholder="    キーワードを入力">
+            <!-- <input class ="submit-button" type="submit" name="submit" value="検索"> -->
+            <button class="submit-button" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+
+        <div>
+          <div class="nukemiti">
+            <h1>抜け道１</h1>
+            <p class="p1">東京都・新宿区</p>a
+            <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
+
+          </div>
+          <div class="nukemiti">
+            <h1>抜け道２</h1>
+            <p class="p1">東京都・渋谷区</p>
+            <p class="p2">意外と細いので自転車を持って通るのが大変でした</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- <aside class="ad-block1-wrapper">
+      <p class="ad-block1">広告１</p>
+      <p class="ad-block1">広告２</p>
+    </aside> -->
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>
