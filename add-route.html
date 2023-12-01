@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抜け道追加</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sanitize.css">
+    <script defer src="./validate_coordenates.js?v=3"></script>
+    <script src="./map.js?v=2"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1QGR-mlSKkyr4m-yQ2acRX-evJ4OILbA&callback=initMap"></script>
+    <!--ファビコンの設定-->
+    <link rel="shortcut icon" href="./design/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./design/images/apple-touch-icon.png">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <img class="logoimage" src="./design/images/NUKEMICHI.png">
+        <!-- ヘッダーロゴ -->
+        <div class="logo"></div>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <!-- 三本線のやつ -->
+                    <a href="search-page.php" class="musimegame">
+                        <img src="./design/images/search.svg">
+                        <li class="nav_item">SEARCH</li>
+                    </a>
+                    <a href="add-route.html" class="arrow">
+                        <img src="./design/images/arrow.svg">
+                        <li class="nav_item">NEW SHORTCUT</li>
+                    </a>
+
+                    <a href="mypage.php" class="hito">
+                        <img src="./design/images/user.svg">
+                        <li class="nav_item">MY PAGE</li>
+                    </a>
+
+                    <a href="index.html" class="tikyuugi">
+                        <img src="./design/images/logout.svg">
+                        <li class="nav_item">LOG OUT</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+
+        <form action="insert.php" method="post">
+            <fieldset class="shortcut-fieldset">
+                <div class="map-box">
+                    <div id="map"></div>
+                    <div class="input-container">
+                        <label>
+                            <input type="text" name="point_A" id="point_A" class="coordinates" maxlength="127" required
+                                placeholder="起点">
+                            <small id="msg"></small>
+                            <small id="point_a-decimal"></small>
+                        </label>
+                        <label>
+                            <input type="text" name="point_B" id="point_B" class="coordinates" maxlength="127" required
+                                placeholder="終点">
+                            <small id="msg2"></small>
+                            <small id="point_b-decimal"></small>
+                        </label>
+                        <input type="text" name="address" id="address" readonly="readonly"
+                            style="outline: none;"></input>
+                        <label>
+                            <input type="text" name="shortcut-name" id="shortcut-name" class="shortcut-name"
+                                maxlength="127" placeholder="抜け道の名前" required>
+                        </label>
+                        <label>
+                            <textarea name="shortcut-info" id="shortcut-info" class="shortcut-info" rows="5"
+                                placeholder="注意書き(任意)"></textarea>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="private" id="private" value="1" checked>
+                            非公開
+                        </label>
+                        
+                    </div>
+                </div>
+                <input id="submitBtn" type="submit" placeholder="送信">
+
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer>
+    <div class="footer-text">
+        <p>&copy; 2023 Michimaker. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</html>

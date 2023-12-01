@@ -1,0 +1,1170 @@
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+/* menu */
+header {
+    position: sticky;
+    top: 0;
+    width: 100% !important;
+    height: 100px;
+    text-align: center;
+    background-color: #fcf4b3;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+
+
+.logoimage {
+    padding-left: 4%;
+    height: 60%;
+    width: auto;
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    justify-content: space-between;
+}
+
+li {
+    padding: 20px 20px 20px 21px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    right: -94vw;
+    top: 40px;
+    position: fixed;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 50px;
+    border-radius: 5px;
+    background: #156797;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 180%;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 180%;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.nav {
+    position: inherit;
+    left: 86%;
+    align-self: flex-start;
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 37%;
+    margin-left: 13%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    background: #fff;
+    transition: 0.25s;
+    text-align: center;
+    padding-top: 5%;
+    background-color: #469db9;
+}
+
+
+/* メニュー黒ポチを消す */
+.nav_list {
+    list-style: none;
+    flex-flow: column;
+    margin: auto;
+    /* width:fit-content */
+}
+
+.nav_list a li {
+    color: #e7f3f6;
+    font-size: 28px;
+    margin-bottom: 3%;
+}
+
+.nav_list a:hover>img {
+    opacity: .7;
+    transition: .3s;
+}
+
+.nav_list img {
+    width: 13%;
+    margin-left: 3%;
+    transition: .3s;
+}
+
+.nav_list div {
+    margin: auto;
+}
+
+
+/* アイコン設定 */
+.nav_list a {
+    border-bottom: solid 3px white;
+    display: flex;
+}
+
+.nav_item {
+    width: 300px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked~.nav_content {
+    left: 50%;
+    /* メニューを画面に入れる */
+}
+
+/* login container */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.message-error {
+    color: red;
+    padding: 0 5%;
+    margin: 0;
+}
+
+.small-logo {
+    width: 20% !important;
+}
+
+main {
+    width: 70%;
+
+    margin: auto;
+    margin-top: 100px !important;
+}
+
+/* map style */
+#map {
+    width: 100%;
+    height: 0;
+    padding: 2%;
+    padding-bottom: 40%;
+    margin: 1%;
+    margin-right: 14%;
+    border: solid 1px #4ea0c9;
+}
+
+.map-box {
+    display: flex;
+}
+
+/* 道登録ページのスタイリング */
+form {
+    display: flex;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container label {
+    margin: auto;
+}
+
+.coordinates {
+    width: 80% !important;
+}
+
+
+#point_A {
+    background-color: #f0a0a1;
+    border: none;
+}
+
+#point_A::placeholder {
+    font-weight: 800;
+    color: #e27878
+}
+
+.correct {
+    color: #9ed6ad;
+}
+
+.wrong {
+    color: #f37063;
+}
+
+#point_B {
+    background-color: #7ec6de;
+    border: none;
+}
+
+#point_B::placeholder {
+    font-weight: 800;
+    color: #4ea0c9;
+}
+
+#msg,
+#msg2 {
+    font-size: xx-large;
+}
+
+label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+#shortcut-info {
+    /* max-width: 350px; */
+    width: 100%;
+    padding: 5% 4%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    background: #dae7ed;
+}
+
+#submitBtn {
+    background-color: #166898;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1.2% 10%;
+    margin-left: 68%;
+}
+
+#submitBtn input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: rgb(17, 87, 127);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.shortcut-name::placeholder {
+    font-weight: 800;
+    color: #a3aeb2
+}
+
+#shortcut-info::placeholder {
+    font-weight: 800;
+    color: #a3aeb2
+}
+
+
+/* ログインページ */
+.login-header {
+    text-align: center;
+    margin-top: 3%;
+    padding: 5%ñ
+}
+
+
+.new-user-btn {
+    background-color: #4ba1d2;
+    color: white;
+    border: none;
+    border-radius: 46px;
+    padding: 11px 30px;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    width: fit-content;
+    transition: .3s;
+}
+
+.new-user-btn a {
+    color: white;
+}
+
+.new-user-btn:hover {
+    background-color: #459db9;
+    transition: 0.3s;
+}
+
+.signup-completeBtn {
+    color: #459db9;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    width: fit-content;
+}
+
+#login-form,
+#signup-form,
+.login-form {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#login-form input,
+#signup-form input,
+.login-form input {
+    width: 100%;
+    background-color: #e8f0fe;
+    padding: 3% 5%;
+    margin: 8px 2vw;
+    border: none;
+    border-radius: 4px;
+}
+
+.login-form input {
+
+    font-size: 2rem;
+}
+
+#signup-form {
+    width: 60% !important;
+}
+
+#login-form input::placeholder,
+#signup-form input::placeholder,
+.login-form input::placeholder {
+    font-weight: 800;
+    color: #b9b9b9;
+}
+
+#login-submitbtn,
+#signup-submitbtn {
+    background-color: #166898 !important;
+    color: white;
+    padding: 1.2% 10% !important;
+    width: fit-content !important;
+    margin-left: 37% !important;
+}
+
+.em {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
+/* 道検索ページのスタイリング */
+.search-box {
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    margin: 3% auto;
+}
+
+
+.search-txtbox {
+    background-color: #d9d9d9;
+    border: none;
+    box-shadow: 0 2px 7px 0 #3333339c;
+    width: 80%;
+    height: fit-content;
+    padding: 2%;
+    padding-right: 4%;
+    margin: auto;
+}
+
+
+.search-box button {
+    border: none;
+    background: none;
+    position: relative;
+    right: 12%;
+    cursor: pointer;
+}
+
+
+.search-result {
+    width: 75%;
+    margin: 40px auto;
+    background-color: #dae7ed;
+    /* border: solid 6px #aac5de; */
+    border: none;
+    border-radius: 39px;
+    box-shadow: 0 2px 7px 0 #1e232581;
+    padding: 8px;
+}
+
+.private{
+    background-color: #e8daed;
+}
+
+.search-result:hover {
+    box-shadow: none;
+    box-shadow: inset 2px 0 7px 0 #1e232581;
+    border: none;
+}
+
+
+.route-name,
+#route-name {
+    color: #0000fe;
+    padding-left: 10%;
+    font-size: 1.5vw;
+}
+
+.username {
+    padding-left: 10%;
+    color: #091350;
+}
+
+.result-location,
+#location {
+    color: #091350;
+    padding-left: 10%;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.result-comment,
+#comment {
+    color: #2c4588b5;
+    padding-left: 10%;
+    font-weight: bold;
+}
+
+/* 検索結果のポップアップまっぷ */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #fef8f1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 50vw;
+    height: fit-content;
+}
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup .map-box {
+    width: 100%;
+    /* set the map and info box to fill the entire width of the popup */
+    display: flex;
+    /* use flexbox to control the layout */
+    flex-wrap: wrap;
+    /* allow the elements to wrap on smaller screens */
+}
+
+.popup .map-box>* {
+    width: 100%;
+    /* set the map and info box to fill the entire width of their container */
+    margin-bottom: 10px;
+    /* add some spacing between the elements */
+}
+
+.popup #map {
+    height: 600px;
+    max-height: 60vh;
+}
+
+#shortcut_id {
+    display: none;
+}
+
+
+#downthumb,
+#upthumb {
+    display: none;
+}
+
+/* mypageスタイリング */
+.mypage {
+    width: 80%;
+    margin: auto;
+}
+
+.user-box {
+    display: flex !important;
+    padding-top: 8vw;
+    margin-left: 14vw;
+    color: #166898;
+}
+
+/* profile picスタイリング */
+.icon-photo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 20vw;
+    width: 20vw;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 40%;
+    padding-bottom: 50%;
+}
+
+@media screen and (max-width: 400px) {
+    .profile-pic span {
+        font-size: xx-small;
+    }
+}
+
+form input[type="file"] {
+    display: none;
+    cursor: pointer;
+}
+
+.upload-btn {
+    width: 3vw;
+    height: 3vw;
+    position: relative;
+    top: 80%;
+    right: 10%;
+    border: none;
+    background-color: #156797;
+    color: white;
+    border-radius: 30px;
+    background: url('./design/images/upload.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    transition: .3s;
+}
+
+.upload-btn:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.upload-msg {
+    color: red;
+    position: relative;
+    padding: 0px;
+    font-size: 1em;
+    left: 26vw;
+}
+
+/*  */
+.user-icon {
+    width: 18vw;
+    height: 100%;
+    border-radius: 20%;
+}
+
+.user-name {
+    margin-left: 5vw;
+}
+
+.user-name h1 {
+    font-size: 3vw;
+}
+
+.user-name h2 {
+    font-size: 2vw;
+    color: #459db9;
+    border-bottom: dashed 2px #469db9;
+    width: fit-content;
+}
+
+.user-name p {
+    font-size: 1.5vw;
+}
+
+.myroutes {
+    border-radius: 30px;
+    margin: 3vw auto;
+    background-color: white;
+    padding: 3vw;
+    width: 80vw;
+}
+
+.myroutes .title {
+    text-align: center;
+    padding: 0;
+    color: #156797;
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 2px;
+    letter-spacing: .25px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+
+.btn-delete {
+    font-size: 16px;
+    color: rgba(255, 0, 0, 0.50);
+    transition: .3s;
+    position: relative;
+    left: 88%;
+    bottom: 150px;
+}
+
+
+
+.mdi-delete-empty {
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: 24.25px;
+    height: 36px;
+}
+
+.btn-delete:hover {
+    background-color: lighten(red, 38%);
+    transition: .3s;
+}
+
+.btn-delete:hover>.mdi-delete-empty {
+    display: block;
+    color: red;
+}
+
+.btn-delete:hover>.mdi-delete {
+    display: none;
+}
+
+/* arrow */
+.back-arrow {
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    font-size: 6vw;
+    color: #5eabd5;
+    z-index: 100;
+}
+
+.back-arrow:hover {
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: #d9d9d9;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 4vw 0 0 0;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text p {
+    background-color: transparent;
+    color: #091350;
+    font-size: 14px;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: solid 2px #091350;
+}
+
+@media screen and (max-width: 1600px) {
+
+    .route-name,
+    #route-name {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .result-location,
+    #location {
+        font-size: 1em;
+    }
+}
+
+@media (min-aspect-ratio: 1777/962) {
+    footer {
+        position: relative;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-text p {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .back-arrow {
+        font-size: 9vw;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px;
+        /* position:absolute;
+        margin: 0; */
+    }
+
+    .footer-text p {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+}
+
+/* media queries　(レスポンシブ対策)) */
+@media screen and (max-width: 1000px) {
+    .map-box {
+        flex-direction: column;
+    }
+
+    #map {
+        margin-bottom: 4vw;
+    }
+
+    #submitBtn {
+        margin-left: 50%;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .user-box {
+        margin-bottom: 4vw;
+    }
+
+    .popup {
+        max-width: none;
+    }
+
+    .drawer_open {
+        right: -89vw;
+    }
+
+    @media (min-aspect-ratio: 516/962) {
+        footer {
+            position: relative;
+        }
+    }
+
+    .upload-msg {
+        font-size: 0.5em;
+        left: 18%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .user-name h1 {
+        font-size: 1.4em;
+    }
+
+    .user-name h2 {
+        font-size: 1em;
+    }
+
+    .user-name p {
+        font-size: 0.4em;
+    }
+
+    #map {
+        padding-bottom: 50%;
+    }
+
+    .popup #map {
+        max-height: 75vh;
+        ;
+    }
+
+    .nav_content {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .search-box button {
+        right: 16%;
+    }
+
+    .search-txtbox {
+        padding: 5%;
+    }
+
+    .result-location {
+        font-size: xx-small;
+        font-weight: 400;
+    }
+
+    .result-comment {
+        font-size: xx-small;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .user-name h1 {
+        font-size: 1em;
+    }
+
+    .user-name h2 {
+        font-size: .9em;
+    }
+
+    #map {
+        padding-bottom: 60%;
+    }
+
+    .nav_content {
+        width: 60%;
+    }
+
+    #drawer_input:checked~.nav_content {
+        left: 41%;
+        /* メニューを画面に入れる */
+    }
+
+    .route-name,
+    #route-name {
+        font-size: 6vw;
+    }
+
+    #signup-submitbtn {
+        padding: 4.2% 12% !important;
+        font-size: x-large !important;
+    }
+
+    #signup-form input {
+        padding: 8% 5% !important;
+        font-size: xx-large !important;
+    }
+}
+
+
+
+@media screen and (max-width: 520px) {
+
+    label {
+        flex-basis: 100%;
+    }
+
+    input[type="text"] {
+        flex-basis: 100%;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 75px;
+        background-color: #fcf4b3
+    }
+
+    main {
+        margin-top: 10%;
+    }
+
+    .nav {
+        margin-top: -4%;
+    }
+
+    .nav_content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logoimage {
+        padding-left: 8%;
+        height: 60%;
+    }
+
+
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        height: 5px;
+        width: 30px;
+    }
+
+    .drawer_open {
+        right: -87vw;
+        top: 5%;
+    }
+
+    #drawer_input:checked~.nav_content {
+        left: 0%;
+        /* メニューを画面に入れる */
+    }
+
+    .home-button {
+        padding: 10px !important;
+    }
+
+    .search-box {
+        margin-top: 100px !important;
+    }
+
+    #login-submitbtn,
+    #signup-submitbtn {
+        padding: none !important;
+        margin-left: 34% !important;
+    }
+
+    .mypage {
+        margin-top: 8vh;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .user-name h1 {
+        font-size: .7em;
+    }
+
+    .user-name h2 {
+        font-size: .7em;
+    }
+
+    .nav {
+        margin-top: -5%;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .logoimage {
+
+        height: 40%;
+    }
+
+    header {
+        width: 100%;
+        height: 8%;
+        background-color: #fcf4b3
+    }
+
+    main {
+        margin-top: 8%;
+    }
+
+    .nav {
+        margin-top: -8%;
+        margin-left: -3%;
+    }
+
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        height: 3px;
+        width: 20px;
+    }
+
+    .drawer_open {
+        top: 4%;
+    }
+
+    #msg,
+    #msg2 {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width:250px) {
+    header {
+        height: 6%;
+    }
+
+    main {
+        margin-top: 6%;
+    }
+
+    .nav {
+        margin-top: -12%;
+    }
+
+    .drawer_open {
+        top: 3%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .login-image {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    #login-form input,
+    .login-form input {
+        margin: 6px 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    #login-form input,
+    .login-form input {
+        margin: 8px 25%;
+        width: 51vw;
+    }
+
+    .new-user-btn {
+        font-size: smaller;
+    }
+
+    #signup-form {
+        width: 20% !important;
+    }
+
+
+}
+
+@media screen and (max-width:300px) {
+    .new-user-btn {
+        font-size: xx-small;
+        padding: 4px 20px;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .nav_item {
+        width: 35vw;
+    }
+
+    .nav_list a li {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .nav_item {
+        width: 30vw;
+    }
+
+    .nav_list a li {
+        font-size: 42px;
+    }
+}

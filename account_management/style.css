@@ -1,0 +1,89 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Container styles */
+.login-container {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 20px 0px #ccc;
+}
+
+/* Heading styles */
+.login-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Error message styles */
+.login-container em {
+    color: red;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Form styles */
+.login-container form {
+    width: 100%;
+}
+
+/* Label styles */
+.login-container label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input styles */
+.login-container input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+}
+
+/* Input:focus styles */
+.login-container input:focus {
+    border-bottom: 2px solid #555;
+}
+
+/* Submit button styles */
+.login-container button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button:hover styles */
+.login-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Link styles */
+.login-container a {
+    display: block;
+    margin-top: 30px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
